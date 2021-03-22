@@ -1,0 +1,1002 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Compose初体验 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05_docker_Compose配置编写规则.html" />
+    
+    
+    <link rel="prev" href="03_docker_Compose安装.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../img/avator.png.icon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../img/avator.png.icon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../base/2020-07-01-docker_学习大纲.html">
+            
+                <a href="../base/2020-07-01-docker_学习大纲.html">
+            
+                    
+                    学习大纲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../base/2020-07-02-docker_概述.html">
+            
+                <a href="../base/2020-07-02-docker_概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../base/2020-07-03-docker_历史.html">
+            
+                <a href="../base/2020-07-03-docker_历史.html">
+            
+                    
+                    历史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../base/2020-07-04-docker_能做设么么.html">
+            
+                <a href="../base/2020-07-04-docker_能做设么么.html">
+            
+                    
+                    能做设么么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../base/2020-07-05-docker_名词概念.html">
+            
+                <a href="../base/2020-07-05-docker_名词概念.html">
+            
+                    
+                    名词概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../base/2020-07-06-docker_安装.html">
+            
+                <a href="../base/2020-07-06-docker_安装.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../base/2020-07-07-docker_阿里云镜像加速.html">
+            
+                <a href="../base/2020-07-07-docker_阿里云镜像加速.html">
+            
+                    
+                    阿里云镜像加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../base/2020-07-08-docker_Run的流程和Docker原理.html">
+            
+                <a href="../base/2020-07-08-docker_Run的流程和Docker原理.html">
+            
+                    
+                    Run的流程和Docker原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../base/2020-07-09-docker_常用命令.html">
+            
+                <a href="../base/2020-07-09-docker_常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../base/2020-07-10-docker_容器命令.html">
+            
+                <a href="../base/2020-07-10-docker_容器命令.html">
+            
+                    
+                    容器命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../base/2020-07-11-docker_常用其他命令.html">
+            
+                <a href="../base/2020-07-11-docker_常用其他命令.html">
+            
+                    
+                    常用其他命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../base/2020-07-12-docker_进入容器的命令.html">
+            
+                <a href="../base/2020-07-12-docker_进入容器的命令.html">
+            
+                    
+                    进入容器的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../base/2020-07-13-docker_常用命令小结.html">
+            
+                <a href="../base/2020-07-13-docker_常用命令小结.html">
+            
+                    
+                    常用命令小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../base/2020-07-14-docker_部署nginx.html">
+            
+                <a href="../base/2020-07-14-docker_部署nginx.html">
+            
+                    
+                    部署nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../base/2020-07-15-docker_部署tomcat.html">
+            
+                <a href="../base/2020-07-15-docker_部署tomcat.html">
+            
+                    
+                    部署tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../base/2020-07-16-docker_部署es.html">
+            
+                <a href="../base/2020-07-16-docker_部署es.html">
+            
+                    
+                    部署es
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../base/2020-07-17-docker_使用kibana连接es.html">
+            
+                <a href="../base/2020-07-17-docker_使用kibana连接es.html">
+            
+                    
+                    使用kibana连接es
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../base/2020-07-18-docker_可视化面板安装.html">
+            
+                <a href="../base/2020-07-18-docker_可视化面板安装.html">
+            
+                    
+                    可视化面板安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../base/2020-07-19-docker_镜像原理之联合文件系统.html">
+            
+                <a href="../base/2020-07-19-docker_镜像原理之联合文件系统.html">
+            
+                    
+                    镜像原理之联合文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../base/2020-07-20-docker_镜像原理之分层理解.html">
+            
+                <a href="../base/2020-07-20-docker_镜像原理之分层理解.html">
+            
+                    
+                    镜像原理之分层理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../base/2020-07-21-docker_commit镜像.html">
+            
+                <a href="../base/2020-07-21-docker_commit镜像.html">
+            
+                    
+                    commit镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../base/2020-07-22-docker_容器数据卷.html">
+            
+                <a href="../base/2020-07-22-docker_容器数据卷.html">
+            
+                    
+                    容器数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../base/2020-07-23-docker_容器数据卷2.html">
+            
+                <a href="../base/2020-07-23-docker_容器数据卷2.html">
+            
+                    
+                    容器数据卷2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../base/2020-07-24-docker_具名挂载和匿名挂载.html">
+            
+                <a href="../base/2020-07-24-docker_具名挂载和匿名挂载.html">
+            
+                    
+                    具名挂载和匿名挂载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="../base/2020-07-25-docker_初始dockerfile.html">
+            
+                <a href="../base/2020-07-25-docker_初始dockerfile.html">
+            
+                    
+                    初始dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="../base/2020-07-26-docker_数据卷容器.html">
+            
+                <a href="../base/2020-07-26-docker_数据卷容器.html">
+            
+                    
+                    数据卷容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    高级
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01_docker_基础回顾.html">
+            
+                <a href="01_docker_基础回顾.html">
+            
+                    
+                    基础回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="02_docker_DockerCompose介绍.html">
+            
+                <a href="02_docker_DockerCompose介绍.html">
+            
+                    
+                    DockerCompose介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="03_docker_Compose安装.html">
+            
+                <a href="03_docker_Compose安装.html">
+            
+                    
+                    Compose安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="04_docker_Compose初体验.html">
+            
+                <a href="04_docker_Compose初体验.html">
+            
+                    
+                    Compose初体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="05_docker_Compose配置编写规则.html">
+            
+                <a href="05_docker_Compose配置编写规则.html">
+            
+                    
+                    Compose配置编写规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="06_docker_使用Compose一键部署WP博客.html">
+            
+                <a href="06_docker_使用Compose一键部署WP博客.html">
+            
+                    
+                    使用Compose一键部署WP博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="07_docker_实战_编写自己的微服务上线.html">
+            
+                <a href="07_docker_实战_编写自己的微服务上线.html">
+            
+                    
+                    实战_编写自己的微服务上线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="08_docker_环境准备_阿里云购买4台服务器.html">
+            
+                <a href="08_docker_环境准备_阿里云购买4台服务器.html">
+            
+                    
+                    环境准备_阿里云购买4台服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="09_docker_Swarm集群搭建.html">
+            
+                <a href="09_docker_Swarm集群搭建.html">
+            
+                    
+                    Swarm集群搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="10_docker_Raft一致协议了解.html">
+            
+                <a href="10_docker_Raft一致协议了解.html">
+            
+                    
+                    Raft一致协议了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="11_docker_Swarm集群弹性创建服务.html">
+            
+                <a href="11_docker_Swarm集群弹性创建服务.html">
+            
+                    
+                    Swarm集群弹性创建服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="12_docker_Swarm概念拓展学习.html">
+            
+                <a href="12_docker_Swarm概念拓展学习.html">
+            
+                    
+                    Swarm概念拓展学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="13_docker_Docker其他命令学习方式.html">
+            
+                <a href="13_docker_Docker其他命令学习方式.html">
+            
+                    
+                    Docker其他命令学习方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="14_docker_Docker完结展望.html">
+            
+                <a href="14_docker_Docker完结展望.html">
+            
+                    
+                    Docker完结展望
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="01-短信验证码-阿里云.html">
+            
+                <a href="01-短信验证码-阿里云.html">
+            
+                    
+                    短信验证码-阿里云
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Compose初体验</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#compose&#x521D;&#x4F53;&#x9A8C;"><b></b>Compose&#x521D;&#x4F53;&#x9A8C;</a></li><li><span class="title-icon "></span><a href="#get-started-with-docker-compose"><b></b>Get started with Docker Compose</a></li><ul><li><span class="title-icon "></span><a href="#step-3-define-services-in-a-compose-file"><b></b>Step 3: Define services in a Compose file</a></li><li><span class="title-icon "></span><a href="#step-4-build-and-run-your-app-with-compose"><b></b>Step 4: Build and run your app with Compose</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>&#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#&#x6D41;&#x7A0B;"><b></b>&#x6D41;&#x7A0B;</a></li><ul><li><span class="title-icon "></span><a href="#docker&#x5C0F;&#x7ED3;"><b></b>docker&#x5C0F;&#x7ED3;</a></li></ul></ul></ul></div><a href="#compose&#x521D;&#x4F53;&#x9A8C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="compose&#x521D;&#x4F53;&#x9A8C;"><a name="compose&#x521D;&#x4F53;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#compose&#x521D;&#x4F53;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>Compose&#x521D;&#x4F53;&#x9A8C;</h1>
+<p>&#x4F53;&#x9A8C;</p>
+<p>&#x5730;&#x5740;:  <a href="https://docs.docker.com/compose/gettingstarted/" target="_blank">https://docs.docker.com/compose/gettingstarted/</a> </p>
+<p><strong>&#x770B;&#x4E00;&#x770B;&#x5B98;&#x65B9;&#x600E;&#x4E48;&#x8BF4;</strong></p>
+<hr>
+<h1 id="get-started-with-docker-compose"><a name="get-started-with-docker-compose" class="anchor-navigation-ex-anchor" href="#get-started-with-docker-compose"><i class="fa fa-link" aria-hidden="true"></i></a>Get started with Docker Compose</h1>
+<p><em>Estimated reading time: 10 minutes</em></p>
+<p>On this page you build a simple Python web application running on Docker Compose. The application uses the Flask framework and maintains a hit counter in Redis. While the sample uses Python, the concepts demonstrated here should be understandable even if you&#x2019;re not familiar with it.</p>
+<p>&#x8FD9;&#x91CC;&#x9762;&#x7528;&#x5230;&#x4E86;python&#x4E2D;&#x7684;flask&#x6846;&#x67B6;</p>
+<p>python&#x5E94;&#x7528;,&#x8BA1;&#x6570;&#x5668;</p>
+<hr>
+<p>&#x4E00;&#x987F;&#x64CD;&#x4F5C;&#x5F00;&#x59CB;</p>
+<hr>
+<ol>
+<li>&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;</li>
+</ol>
+<pre><code class="lang-cmd">[root@iz8g9301trfnpxz home]# <span class="hljs-built_in">mkdir</span> composetest
+[root@iz8g9301trfnpxz home]# <span class="hljs-built_in">cd</span> composetest/
+[root@iz8g9301trfnpxz composetest]# ll
+total <span class="hljs-number">0</span>
+[root@iz8g9301trfnpxz composetest]# vim app.py
+[root@iz8g9301trfnpxz composetest]# vim requirements.txt
+[root@iz8g9301trfnpxz composetest]# vim Dockerfile
+</code></pre>
+<p>&#x521B;&#x5EFA;app.py&#x6587;&#x4EF6;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> time
+
+<span class="hljs-keyword">import</span> redis
+<span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask
+
+app = Flask(__name__)
+cache = redis.Redis(host=<span class="hljs-string">&apos;redis&apos;</span>, port=<span class="hljs-number">6379</span>)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_hit_count</span><span class="hljs-params">()</span>:</span>
+    retries = <span class="hljs-number">5</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">return</span> cache.incr(<span class="hljs-string">&apos;hits&apos;</span>)
+        <span class="hljs-keyword">except</span> redis.exceptions.ConnectionError <span class="hljs-keyword">as</span> exc:
+            <span class="hljs-keyword">if</span> retries == <span class="hljs-number">0</span>:
+                <span class="hljs-keyword">raise</span> exc
+            retries -= <span class="hljs-number">1</span>
+            time.sleep(<span class="hljs-number">0.5</span>)
+
+
+<span class="hljs-meta">@app.route(&apos;/&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hello</span><span class="hljs-params">()</span>:</span>
+    count = get_hit_count()
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Hello World! I have been seen {} times.\n&apos;</span>.format(count)
+</code></pre>
+<p>&#x521B;&#x5EFA;requirements.txt&#x5185;&#x5BB9;</p>
+<pre><code>flask
+redis
+</code></pre><p>&#x521B;&#x5EFA;dockerfile</p>
+<pre><code class="lang-cmd">FROM python:<span class="hljs-number">3</span>.<span class="hljs-number">7</span>-alpine
+WORKDIR /code
+ENV FLASK_APP app.py
+ENV FLASK_RUN_HOST <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>
+RUN apk add --no-cache gcc musl-dev linux-headers
+<span class="hljs-built_in">COPY</span> requirements.txt requirements.txt
+RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+EXPOSE <span class="hljs-number">5000</span>
+<span class="hljs-built_in">COPY</span> . .
+<span class="hljs-built_in">CMD</span> [&quot;flask&quot;, &quot;run&quot;]
+</code></pre>
+<p>&#x5B9A;&#x4E49;&#x670D;&#x52A1;</p>
+<h2 id="step-3-define-services-in-a-compose-file"><a name="step-3-define-services-in-a-compose-file" class="anchor-navigation-ex-anchor" href="#step-3-define-services-in-a-compose-file"><i class="fa fa-link" aria-hidden="true"></i></a>Step 3: Define services in a Compose file</h2>
+<p>Create a file called <code>docker-compose.yml</code> in your project directory and paste the following:</p>
+<pre><code>version: &apos;3&apos;
+services:
+  web:
+    build: .
+    ports:
+      - &quot;5000:5000&quot;
+  redis:
+    image: &quot;redis:alpine&quot;
+</code></pre><p>&#x6267;&#x884C;</p>
+<h2 id="step-4-build-and-run-your-app-with-compose"><a name="step-4-build-and-run-your-app-with-compose" class="anchor-navigation-ex-anchor" href="#step-4-build-and-run-your-app-with-compose"><i class="fa fa-link" aria-hidden="true"></i></a>Step 4: Build and run your app with Compose</h2>
+<ol>
+<li>From your project directory, start up your application by running <code>docker-compose up</code>.</li>
+</ol>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h2>
+<ol>
+<li>&#x5E94;&#x7528; app.py</li>
+<li>Dockerfile&#x5E94;&#x7528;&#x6253;&#x5305;&#x4E3A;&#x955C;&#x50CF;</li>
+<li>Docker-compose yaml&#x6587;&#x4EF6;(&#x5B9A;&#x4E49;&#x6574;&#x4E2A;&#x670D;&#x52A1;,&#x9700;&#x8981;&#x7684;&#x73AF;&#x5883;.web, redis) &#x5B8C;&#x6574;&#x7684;&#x4E0A;&#x7EBF;&#x670D;&#x52A1;!</li>
+<li>&#x542F;&#x52A8;compose&#x9879;&#x76EE;(docker-compose up)</li>
+</ol>
+<h2 id="&#x6D41;&#x7A0B;"><a name="&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D41;&#x7A0B;</h2>
+<ol>
+<li>&#x521B;&#x5EFA;&#x7F51;&#x7EDC;</li>
+<li>&#x6267;&#x884C;Docker-compose.yml&#x6587;&#x4EF6;</li>
+<li>&#x542F;&#x52A8;&#x670D;&#x52A1;</li>
+</ol>
+<p>docker-compose yaml</p>
+<p>Creating composetest_web_1 ... done</p>
+<p>Creating composetest_redis_1 ... done</p>
+<ol>
+<li><p>&#x6587;&#x4EF6;&#x540D; composetest</p>
+</li>
+<li><p>&#x670D;&#x52A1;</p>
+<ol>
+<li><pre><code>version: &apos;3&apos;
+services:
+  web:
+    build: .
+    ports:
+      - &quot;5000:5000&quot;
+  redis:
+    image: &quot;redis:alpine&quot;
+</code></pre></li>
+</ol>
+</li>
+</ol>
+<hr>
+<p>compose up &#x540E;,&#x4F1A;&#x81EA;&#x52A8;&#x5E2E;&#x6211;&#x4EEC;&#x5B89;&#x88C5;docker&#x9700;&#x8981;&#x7684;&#x955C;&#x50CF;</p>
+<p>&#x6BD4;&#x5982;python</p>
+<p><a href="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806456881.png" data-lightbox="9df1a28a-5ecf-4d70-b2c1-9fb717962e11" data-title="1597806456881"><img src="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806456881.png" alt="1597806456881"></a></p>
+<p>mysql:3306</p>
+<p>10&#x4E2A;&#x5BB9;&#x5668;&#x5B9E;&#x4F8B;:mysql 10, ip(&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x4E0B;&#x9762;.&#x57DF;&#x540D;&#x8BBF;&#x95EE;)</p>
+<p><a href="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806579451.png" data-lightbox="9f3c4fad-8a80-4974-884e-e52faac5bda7" data-title="1597806579451"><img src="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806579451.png" alt="1597806579451"></a></p>
+<p>&#x5982;&#x679C;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x4E0B;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x57DF;&#x540D;&#x8BBF;&#x95EE;.</p>
+<p><a href="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806827606.png" data-lightbox="eba7f89d-2245-41c1-99a2-deadad84a59c" data-title="1597806827606"><img src="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806827606.png" alt="1597806827606"></a></p>
+<p>&#x53EF;&#x4EE5;&#x4E00;&#x952E;&#x542F;&#x52A8;,&#x670D;&#x52A1;,&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x7684;</p>
+<h3 id="docker&#x5C0F;&#x7ED3;"><a name="docker&#x5C0F;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#docker&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>docker&#x5C0F;&#x7ED3;</h3>
+<ol>
+<li>Docker&#x955C;&#x50CF;.run-&gt; &#x5BB9;&#x5668;</li>
+<li>DockerFile&#x6784;&#x5EFA;&#x955C;&#x50CF; (&#x670D;&#x52A1;&#x6253;&#x5305;)</li>
+<li>docker-compose&#x542F;&#x52A8;&#x9879;&#x76EE;(&#x7F16;&#x6392;,&#x591A;&#x4E2A;&#x5FAE;&#x670D;&#x52A1;/&#x73AF;&#x5883;)</li>
+<li>docker&#x7F51;&#x7EDC;</li>
+<li></li>
+</ol>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03_docker_Compose安装.html" class="navigation navigation-prev " aria-label="Previous page: Compose安装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05_docker_Compose配置编写规则.html" class="navigation navigation-next " aria-label="Next page: Compose配置编写规则">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Compose初体验","level":"1.3.4","depth":2,"next":{"title":"Compose配置编写规则","level":"1.3.5","depth":2,"path":"advance/05_docker_Compose配置编写规则.md","ref":"advance/05_docker_Compose配置编写规则.md","articles":[]},"previous":{"title":"Compose安装","level":"1.3.3","depth":2,"path":"advance/03_docker_Compose安装.md","ref":"advance/03_docker_Compose安装.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advance/04_docker_Compose初体验.md","mtime":"2021-03-22T11:46:35.459Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-22T12:17:09.241Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,906 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Swarm集群弹性创建服务 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="12_docker_Swarm概念拓展学习.html" />
+    
+    
+    <link rel="prev" href="10_docker_Raft一致协议了解.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../img/avator.png.icon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../img/avator.png.icon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../base/2020-07-01-docker_学习大纲.html">
+            
+                <a href="../base/2020-07-01-docker_学习大纲.html">
+            
+                    
+                    学习大纲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../base/2020-07-02-docker_概述.html">
+            
+                <a href="../base/2020-07-02-docker_概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../base/2020-07-03-docker_历史.html">
+            
+                <a href="../base/2020-07-03-docker_历史.html">
+            
+                    
+                    历史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../base/2020-07-04-docker_能做设么么.html">
+            
+                <a href="../base/2020-07-04-docker_能做设么么.html">
+            
+                    
+                    能做设么么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../base/2020-07-05-docker_名词概念.html">
+            
+                <a href="../base/2020-07-05-docker_名词概念.html">
+            
+                    
+                    名词概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../base/2020-07-06-docker_安装.html">
+            
+                <a href="../base/2020-07-06-docker_安装.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../base/2020-07-07-docker_阿里云镜像加速.html">
+            
+                <a href="../base/2020-07-07-docker_阿里云镜像加速.html">
+            
+                    
+                    阿里云镜像加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../base/2020-07-08-docker_Run的流程和Docker原理.html">
+            
+                <a href="../base/2020-07-08-docker_Run的流程和Docker原理.html">
+            
+                    
+                    Run的流程和Docker原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../base/2020-07-09-docker_常用命令.html">
+            
+                <a href="../base/2020-07-09-docker_常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../base/2020-07-10-docker_容器命令.html">
+            
+                <a href="../base/2020-07-10-docker_容器命令.html">
+            
+                    
+                    容器命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../base/2020-07-11-docker_常用其他命令.html">
+            
+                <a href="../base/2020-07-11-docker_常用其他命令.html">
+            
+                    
+                    常用其他命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../base/2020-07-12-docker_进入容器的命令.html">
+            
+                <a href="../base/2020-07-12-docker_进入容器的命令.html">
+            
+                    
+                    进入容器的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../base/2020-07-13-docker_常用命令小结.html">
+            
+                <a href="../base/2020-07-13-docker_常用命令小结.html">
+            
+                    
+                    常用命令小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../base/2020-07-14-docker_部署nginx.html">
+            
+                <a href="../base/2020-07-14-docker_部署nginx.html">
+            
+                    
+                    部署nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../base/2020-07-15-docker_部署tomcat.html">
+            
+                <a href="../base/2020-07-15-docker_部署tomcat.html">
+            
+                    
+                    部署tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../base/2020-07-16-docker_部署es.html">
+            
+                <a href="../base/2020-07-16-docker_部署es.html">
+            
+                    
+                    部署es
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../base/2020-07-17-docker_使用kibana连接es.html">
+            
+                <a href="../base/2020-07-17-docker_使用kibana连接es.html">
+            
+                    
+                    使用kibana连接es
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../base/2020-07-18-docker_可视化面板安装.html">
+            
+                <a href="../base/2020-07-18-docker_可视化面板安装.html">
+            
+                    
+                    可视化面板安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../base/2020-07-19-docker_镜像原理之联合文件系统.html">
+            
+                <a href="../base/2020-07-19-docker_镜像原理之联合文件系统.html">
+            
+                    
+                    镜像原理之联合文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../base/2020-07-20-docker_镜像原理之分层理解.html">
+            
+                <a href="../base/2020-07-20-docker_镜像原理之分层理解.html">
+            
+                    
+                    镜像原理之分层理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../base/2020-07-21-docker_commit镜像.html">
+            
+                <a href="../base/2020-07-21-docker_commit镜像.html">
+            
+                    
+                    commit镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../base/2020-07-22-docker_容器数据卷.html">
+            
+                <a href="../base/2020-07-22-docker_容器数据卷.html">
+            
+                    
+                    容器数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../base/2020-07-23-docker_容器数据卷2.html">
+            
+                <a href="../base/2020-07-23-docker_容器数据卷2.html">
+            
+                    
+                    容器数据卷2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../base/2020-07-24-docker_具名挂载和匿名挂载.html">
+            
+                <a href="../base/2020-07-24-docker_具名挂载和匿名挂载.html">
+            
+                    
+                    具名挂载和匿名挂载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="../base/2020-07-25-docker_初始dockerfile.html">
+            
+                <a href="../base/2020-07-25-docker_初始dockerfile.html">
+            
+                    
+                    初始dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="../base/2020-07-26-docker_数据卷容器.html">
+            
+                <a href="../base/2020-07-26-docker_数据卷容器.html">
+            
+                    
+                    数据卷容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    高级
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01_docker_基础回顾.html">
+            
+                <a href="01_docker_基础回顾.html">
+            
+                    
+                    基础回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="02_docker_DockerCompose介绍.html">
+            
+                <a href="02_docker_DockerCompose介绍.html">
+            
+                    
+                    DockerCompose介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="03_docker_Compose安装.html">
+            
+                <a href="03_docker_Compose安装.html">
+            
+                    
+                    Compose安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="04_docker_Compose初体验.html">
+            
+                <a href="04_docker_Compose初体验.html">
+            
+                    
+                    Compose初体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="05_docker_Compose配置编写规则.html">
+            
+                <a href="05_docker_Compose配置编写规则.html">
+            
+                    
+                    Compose配置编写规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="06_docker_使用Compose一键部署WP博客.html">
+            
+                <a href="06_docker_使用Compose一键部署WP博客.html">
+            
+                    
+                    使用Compose一键部署WP博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="07_docker_实战_编写自己的微服务上线.html">
+            
+                <a href="07_docker_实战_编写自己的微服务上线.html">
+            
+                    
+                    实战_编写自己的微服务上线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="08_docker_环境准备_阿里云购买4台服务器.html">
+            
+                <a href="08_docker_环境准备_阿里云购买4台服务器.html">
+            
+                    
+                    环境准备_阿里云购买4台服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="09_docker_Swarm集群搭建.html">
+            
+                <a href="09_docker_Swarm集群搭建.html">
+            
+                    
+                    Swarm集群搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="10_docker_Raft一致协议了解.html">
+            
+                <a href="10_docker_Raft一致协议了解.html">
+            
+                    
+                    Raft一致协议了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.11" data-path="11_docker_Swarm集群弹性创建服务.html">
+            
+                <a href="11_docker_Swarm集群弹性创建服务.html">
+            
+                    
+                    Swarm集群弹性创建服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="12_docker_Swarm概念拓展学习.html">
+            
+                <a href="12_docker_Swarm概念拓展学习.html">
+            
+                    
+                    Swarm概念拓展学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="13_docker_Docker其他命令学习方式.html">
+            
+                <a href="13_docker_Docker其他命令学习方式.html">
+            
+                    
+                    Docker其他命令学习方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="14_docker_Docker完结展望.html">
+            
+                <a href="14_docker_Docker完结展望.html">
+            
+                    
+                    Docker完结展望
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="01-短信验证码-阿里云.html">
+            
+                <a href="01-短信验证码-阿里云.html">
+            
+                    
+                    短信验证码-阿里云
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Swarm集群弹性创建服务</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h3 id="&#x4F53;&#x4F1A;"><a name="&#x4F53;&#x4F1A;" class="anchor-navigation-ex-anchor" href="#&#x4F53;&#x4F1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F53;&#x4F1A;</h3>
+<p>&#x5F39;&#x6027;,&#x8D1F;&#x8F7D;,&#x6269;&#x7F29;&#x5BB9;</p>
+<p>&#x4EE5;&#x540E;&#x544A;&#x522B; docker run!</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x662F;&#x7528;docker run  &#x90A3;&#x4F60;docker &#x8FD8;&#x662F;&#x73A9;&#x5177;&#x72B6;&#x6001;</p>
+<p>dokcer-compose up! &#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x9879;&#x76EE;.&#x5355;&#x673A;!</p>
+<p>&#x96C6;&#x7FA4;: swarm <code>docker service</code></p>
+<p>&#x5BB9;&#x5668; =&gt; &#x670D;&#x52A1;! </p>
+<p>redis! = 3&#x4EFD;! &#x5BB9;&#x5668;!</p>
+<p>&#x96C6;&#x7FA4;: &#x9AD8;&#x53EF;&#x7528;, web-&gt; redis(3&#x53F0;,&#x4E0D;&#x540C;&#x7684;&#x673A;&#x5668;&#x4E0A;!)</p>
+<p><a href="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597819728670.png" data-lightbox="53fac58c-c1db-4b41-a22a-308f6464b8fe" data-title="1597819728670"><img src="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597819728670.png" alt="1597819728670"></a></p>
+<p>&#x5BB9;&#x5668; =&gt; &#x670D;&#x52A1; =&gt; &#x526F;&#x672C;!</p>
+<p>redis&#x670D;&#x52A1; =&gt; 10&#x4E2A;&#x526F;&#x672C; ! (&#x540C;&#x65F6;&#x5F00;&#x542F;10&#x4E2A;redis&#x5BB9;&#x5668;)</p>
+<p><a href="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597819852922.png" data-lightbox="ca49d20a-2a6d-41b2-a0fd-43fbda6daa30" data-title="1597819852922"><img src="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597819852922.png" alt="1597819852922"></a></p>
+<p>&#x4F53;&#x9A8C;: &#x521B;&#x5EFA;&#x670D;&#x52A1;,&#x52A8;&#x6001;&#x6269;&#x5C55;&#x670D;&#x52A1;,&#x52A8;&#x6001;</p>
+<p><a href="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597819950319.png" data-lightbox="5e2a92f1-5aa4-4a9a-a987-d46ccfe74b76" data-title="1597819950319"><img src="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597819950319.png" alt="1597819950319"></a></p>
+<p>&#x7070;&#x5EA6;&#x53D1;&#x5E03;:&#x91D1;&#x4E1D;&#x96C0;&#x53D1;&#x5E03;!</p>
+<p>&#x505C;&#x6B62;</p>
+<p>&#x6DD8;&#x5B9D;! &#x4E0D;&#x53EF;&#x80FD;&#x6709;404</p>
+<p>&#x5C31;&#x662F;&#x8BF4;&#x5347;&#x7EA7;&#x4E0D;&#x5F71;&#x54CD;&#x53D1;&#x5E03;</p>
+<p><a href="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597820116318.png" data-lightbox="716a0e11-6d74-4530-8aa5-f412174620a5" data-title="1597820116318"><img src="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597820116318.png" alt="1597820116318"></a></p>
+<pre><code class="lang-cmd">docker run # &#x5BB9;&#x5668;&#x542F;&#x52A8; ! &#x4E0D;&#x5177;&#x6709;&#x6269;&#x7F29;&#x5BB9;&#x5668;
+docker service # &#x670D;&#x52A1;! &#x5177;&#x6709;&#x6269;&#x7F29;&#x5BB9;&#x5668;,&#x6EDA;&#x52A8;&#x66F4;&#x65B0;!
+</code></pre>
+<p>&#x67E5;&#x770B;&#x670D;&#x52A1;</p>
+<p><a href="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597820201431.png" data-lightbox="3440a8b1-80ad-430b-ab74-30070094d486" data-title="1597820201431"><img src="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597820201431.png" alt="1597820201431"></a></p>
+<p>&#x52A8;&#x6001;&#x6269;&#x7F29;&#x5BB9;</p>
+<p><a href="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597820731457.png" data-lightbox="9199c017-a6aa-4259-b2c5-b8b279154887" data-title="1597820731457"><img src="11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597820731457.png" alt="1597820731457"></a></p>
+<p>&#x670D;&#x52A1;,&#x96C6;&#x7FA4;&#x4E2D;&#x4EFB;&#x610F;&#x7684;&#x8282;&#x70B9;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;.&#x670D;&#x52A1;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x526F;&#x672C;&#x52A8;&#x6001;&#x6269;&#x7F29;&#x5BB9;&#x5B9E;&#x73B0;&#x9AD8;&#x53EF;&#x7528;!</p>
+<hr>
+<p>&#x5F39;&#x6027;,&#x6269;&#x7F29;&#x5BB9; &#x5341;&#x5206;&#x91CD;&#x8981;</p>
+<p>10&#x53F0;&#x670D;&#x52A1;&#x5668; &#x6BD4;&#x5982; aliyun 10000&#x53F0;&#x670D;&#x52A1;&#x5668; , &#x5356;&#x7ED9;&#x522B;&#x4EBA; ! &#x865A;&#x62DF;&#x5316;! </p>
+<p>&#x670D;&#x52A1;&#x7684;&#x9AD8;&#x53EF;&#x7528;,&#x4EFB;&#x4F55;&#x7684;&#x4F01;&#x4E1A;</p>
+<p>delete the password</p>
+<p> <a href="https://www.bilibili.com/video/BV1kv411q7Qc?p=11" target="_blank">https://www.bilibili.com/video/BV1kv411q7Qc?p=11</a> </p>
+<p>&#x79FB;&#x9664;!</p>
+<p>docker swarm &#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x96BE;</p>
+<p>&#x53EA;&#x8981;&#x4F1A;&#x642D;&#x5EFA;&#x96C6;&#x7FA4;,&#x4F1A;&#x542F;&#x52A8;&#x670D;&#x52A1;,&#x52A8;&#x6001;&#x7BA1;&#x7406;&#x5BB9;&#x5668;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;!</p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="10_docker_Raft一致协议了解.html" class="navigation navigation-prev " aria-label="Previous page: Raft一致协议了解">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="12_docker_Swarm概念拓展学习.html" class="navigation navigation-next " aria-label="Next page: Swarm概念拓展学习">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Swarm集群弹性创建服务","level":"1.3.11","depth":2,"next":{"title":"Swarm概念拓展学习","level":"1.3.12","depth":2,"path":"advance/12_docker_Swarm概念拓展学习.md","ref":"advance/12_docker_Swarm概念拓展学习.md","articles":[]},"previous":{"title":"Raft一致协议了解","level":"1.3.10","depth":2,"path":"advance/10_docker_Raft一致协议了解.md","ref":"advance/10_docker_Raft一致协议了解.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advance/11_docker_Swarm集群弹性创建服务.md","mtime":"2021-03-22T11:46:35.478Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-22T12:17:09.241Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
