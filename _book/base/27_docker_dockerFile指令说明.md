@@ -1,7 +1,7 @@
 
 # DockerFile指令说明
 
-```shell script
+```bash
 
 
 FROM # 基础镜像,一切从这里开始构建

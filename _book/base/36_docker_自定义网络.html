@@ -967,81 +967,97 @@
                                 <section class="normal markdown-section">
                                 
                                 <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#docker0&#x81EA;&#x5B9A;&#x4E49;&#x7F51;&#x7EDC;"><b></b>docker0&#x81EA;&#x5B9A;&#x4E49;&#x7F51;&#x7EDC;</a></li></ul></div><a href="#docker0&#x81EA;&#x5B9A;&#x4E49;&#x7F51;&#x7EDC;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="docker0&#x81EA;&#x5B9A;&#x4E49;&#x7F51;&#x7EDC;"><a name="docker0&#x81EA;&#x5B9A;&#x4E49;&#x7F51;&#x7EDC;" class="anchor-navigation-ex-anchor" href="#docker0&#x81EA;&#x5B9A;&#x4E49;&#x7F51;&#x7EDC;"><i class="fa fa-link" aria-hidden="true"></i></a>docker0&#x81EA;&#x5B9A;&#x4E49;&#x7F51;&#x7EDC;</h1>
-<p>&#x67E5;&#x770B;&#x6240;&#x6709;&#x7684;&#x7F51;&#x7EDC;
-```shell script
-[root@iz8g9301trfnpxz home]# docker network ls
+<p>&#x67E5;&#x770B;&#x6240;&#x6709;&#x7684;&#x7F51;&#x7EDC;</p>
+<pre><code class="lang-bash">[root@iz8g9301trfnpxz home]<span class="hljs-comment"># docker network ls</span>
 NETWORK ID          NAME                DRIVER              SCOPE
-68c30b64280c        bridge              bridge              local
-e5373821382b        host                host                local
-bc64d000f692        none                null                local</p>
-<pre><code>&#x7F51;&#x7EDC;&#x6A21;&#x5F0F;
-
-
-|&#x7F51;&#x7EDC;&#x6A21;&#x5F0F;|&#x89E3;&#x91CA;|
-|---|---|
-|bridge|&#x6865;&#x63A5;docker(&#x9ED8;&#x8BA4;,&#x81EA;&#x5DF1;&#x521B;&#x5EFA;&#x4E5F;&#x662F;bridge&#x6A21;&#x5F0F;)|
-|none|&#x4E0D;&#x914D;&#x7F6E;&#x7F51;&#x7EDC;|
-|host|&#x548C;&#x5BBF;&#x4E3B;&#x673A;&#x5171;&#x4EAB;&#x7F51;&#x7EDC;|
-|container|&#x5BB9;&#x5668;&#x7F51;&#x7EDC;&#x8FDE;&#x901A;!(&#x7528;&#x7684;&#x5C11;!&#x5C40;&#x9650;&#x5F88;&#x5927;)|
-
-
-&#x6D4B;&#x8BD5;
-```shell script
-# &#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x542F;&#x52A8;&#x7684;&#x547D;&#x4EE4; --net bridge ,&#x800C;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7684;docker0
-[root@iz8g9301trfnpxz home]# docker run -d -P --name tomcat01 tomcat
-[root@iz8g9301trfnpxz home]# docker run -d -P --name tomcat01 --net bridge tomcat
+68c30b64280c        bridge              bridge              <span class="hljs-built_in">local</span>
+e5373821382b        host                host                <span class="hljs-built_in">local</span>
+bc64d000f692        none                null                <span class="hljs-built_in">local</span>
+</code></pre>
+<p>&#x7F51;&#x7EDC;&#x6A21;&#x5F0F;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7F51;&#x7EDC;&#x6A21;&#x5F0F;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bridge</td>
+<td>&#x6865;&#x63A5;docker(&#x9ED8;&#x8BA4;,&#x81EA;&#x5DF1;&#x521B;&#x5EFA;&#x4E5F;&#x662F;bridge&#x6A21;&#x5F0F;)</td>
+</tr>
+<tr>
+<td>none</td>
+<td>&#x4E0D;&#x914D;&#x7F6E;&#x7F51;&#x7EDC;</td>
+</tr>
+<tr>
+<td>host</td>
+<td>&#x548C;&#x5BBF;&#x4E3B;&#x673A;&#x5171;&#x4EAB;&#x7F51;&#x7EDC;</td>
+</tr>
+<tr>
+<td>container</td>
+<td>&#x5BB9;&#x5668;&#x7F51;&#x7EDC;&#x8FDE;&#x901A;!(&#x7528;&#x7684;&#x5C11;!&#x5C40;&#x9650;&#x5F88;&#x5927;)</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6D4B;&#x8BD5;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x542F;&#x52A8;&#x7684;&#x547D;&#x4EE4; --net bridge ,&#x800C;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7684;docker0</span>
+[root@iz8g9301trfnpxz home]<span class="hljs-comment"># docker run -d -P --name tomcat01 tomcat</span>
+[root@iz8g9301trfnpxz home]<span class="hljs-comment"># docker run -d -P --name tomcat01 --net bridge tomcat</span>
 120ae6154cb8a090d7bf43c5b25620fa6913afd1eae5426ec6dc3fb95de1e4b2
 
-# docker0 &#x7279;&#x70B9;: &#x9ED8;&#x8BA4;,&#x57DF;&#x540D;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;,--link&#x53EF;&#x4EE5;&#x6253;&#x901A;&#x8FDE;&#x63A5;!
+<span class="hljs-comment"># docker0 &#x7279;&#x70B9;: &#x9ED8;&#x8BA4;,&#x57DF;&#x540D;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;,--link&#x53EF;&#x4EE5;&#x6253;&#x901A;&#x8FDE;&#x63A5;!</span>
 
-# &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;! 
-# --driver bridge
-# --subnet 192.168.0.0/16   192.168.0.2
-# --gateway 192.168.0.1 
-[root@iz8g9301trfnpxz home]# docker network create --driver bridge --subnet 192.168.0.0/16 --gateway 192.168.0.1 mynet
+<span class="hljs-comment"># &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;! </span>
+<span class="hljs-comment"># --driver bridge</span>
+<span class="hljs-comment"># --subnet 192.168.0.0/16   192.168.0.2</span>
+<span class="hljs-comment"># --gateway 192.168.0.1 </span>
+[root@iz8g9301trfnpxz home]<span class="hljs-comment"># docker network create --driver bridge --subnet 192.168.0.0/16 --gateway 192.168.0.1 mynet</span>
 8a651bded67f27601cc17590df67043bad863e8b9e3b8b3f9b636bf8ebbb30f8
 
-[root@iz8g9301trfnpxz home]# docker network ls
+[root@iz8g9301trfnpxz home]<span class="hljs-comment"># docker network ls</span>
 NETWORK ID          NAME                DRIVER              SCOPE
-68c30b64280c        bridge              bridge              local
-e5373821382b        host                host                local
-8a651bded67f        mynet               bridge              local
-bc64d000f692        none                null                local
-</code></pre><p>&#x67E5;&#x770B;&#x4E00;&#x4E0B;</p>
-<p>```shell script</p>
-<p>[root@iz8g9301trfnpxz home]# docker network inspect mynet
+68c30b64280c        bridge              bridge              <span class="hljs-built_in">local</span>
+e5373821382b        host                host                <span class="hljs-built_in">local</span>
+8a651bded67f        mynet               bridge              <span class="hljs-built_in">local</span>
+bc64d000f692        none                null                <span class="hljs-built_in">local</span>
+</code></pre>
+<p>&#x67E5;&#x770B;&#x4E00;&#x4E0B;</p>
+<pre><code class="lang-bash">
+[root@iz8g9301trfnpxz home]<span class="hljs-comment"># docker network inspect mynet</span>
 [
     {
-        &quot;Name&quot;: &quot;mynet&quot;,
-        &quot;Id&quot;: &quot;8a651bded67f27601cc17590df67043bad863e8b9e3b8b3f9b636bf8ebbb30f8&quot;,
-        &quot;Created&quot;: &quot;2020-08-03T09:57:58.644192346+08:00&quot;,
-        &quot;Scope&quot;: &quot;local&quot;,
-        &quot;Driver&quot;: &quot;bridge&quot;,
-        &quot;EnableIPv6&quot;: false,
-        &quot;IPAM&quot;: {
-            &quot;Driver&quot;: &quot;default&quot;,
-            &quot;Options&quot;: {},
-            &quot;Config&quot;: [
+        <span class="hljs-string">&quot;Name&quot;</span>: <span class="hljs-string">&quot;mynet&quot;</span>,
+        <span class="hljs-string">&quot;Id&quot;</span>: <span class="hljs-string">&quot;8a651bded67f27601cc17590df67043bad863e8b9e3b8b3f9b636bf8ebbb30f8&quot;</span>,
+        <span class="hljs-string">&quot;Created&quot;</span>: <span class="hljs-string">&quot;2020-08-03T09:57:58.644192346+08:00&quot;</span>,
+        <span class="hljs-string">&quot;Scope&quot;</span>: <span class="hljs-string">&quot;local&quot;</span>,
+        <span class="hljs-string">&quot;Driver&quot;</span>: <span class="hljs-string">&quot;bridge&quot;</span>,
+        <span class="hljs-string">&quot;EnableIPv6&quot;</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;IPAM&quot;</span>: {
+            <span class="hljs-string">&quot;Driver&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>,
+            <span class="hljs-string">&quot;Options&quot;</span>: {},
+            <span class="hljs-string">&quot;Config&quot;</span>: [
                 {
-                    &quot;Subnet&quot;: &quot;192.168.0.0/16&quot;,
-                    &quot;Gateway&quot;: &quot;192.168.0.1&quot;
+                    <span class="hljs-string">&quot;Subnet&quot;</span>: <span class="hljs-string">&quot;192.168.0.0/16&quot;</span>,
+                    <span class="hljs-string">&quot;Gateway&quot;</span>: <span class="hljs-string">&quot;192.168.0.1&quot;</span>
                 }
             ]
         },
-        &quot;Internal&quot;: false,
-        &quot;Attachable&quot;: false,
-        &quot;Ingress&quot;: false,
-        &quot;ConfigFrom&quot;: {
-            &quot;Network&quot;: &quot;&quot;
+        <span class="hljs-string">&quot;Internal&quot;</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;Attachable&quot;</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;Ingress&quot;</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;ConfigFrom&quot;</span>: {
+            <span class="hljs-string">&quot;Network&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
         },
-        &quot;ConfigOnly&quot;: false,
-        &quot;Containers&quot;: {},
-        &quot;Options&quot;: {},
-        &quot;Labels&quot;: {}
+        <span class="hljs-string">&quot;ConfigOnly&quot;</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;Containers&quot;</span>: {},
+        <span class="hljs-string">&quot;Options&quot;</span>: {},
+        <span class="hljs-string">&quot;Labels&quot;</span>: {}
     }
 ]
-[root@iz8g9301trfnpxz home]# </p>
-<p>```</p>
+[root@iz8g9301trfnpxz home]<span class="hljs-comment">#</span>
+</code></pre>
 </body></html>
                                 
                                 </section>
@@ -1085,7 +1101,7 @@ bc64d000f692        none                null                local
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"自定义网络","level":"1.2.37","depth":2,"next":{"title":"网络连通","level":"1.2.38","depth":2,"path":"base/37_docker_网络连通.md","ref":"base/37_docker_网络连通.md","articles":[]},"previous":{"title":"容器互联","level":"1.2.36","depth":2,"path":"base/35_docker_容器互联.md","ref":"base/35_docker_容器互联.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/36_docker_自定义网络.md","mtime":"2020-08-06T11:11:16.359Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T11:49:21.474Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"自定义网络","level":"1.2.37","depth":2,"next":{"title":"网络连通","level":"1.2.38","depth":2,"path":"base/37_docker_网络连通.md","ref":"base/37_docker_网络连通.md","articles":[]},"previous":{"title":"容器互联","level":"1.2.36","depth":2,"path":"base/35_docker_容器互联.md","ref":"base/35_docker_容器互联.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/36_docker_自定义网络.md","mtime":"2021-03-23T11:52:14.306Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T11:52:17.227Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

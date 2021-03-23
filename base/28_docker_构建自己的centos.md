@@ -5,7 +5,7 @@
 
 创建自己的centos
 
-```shell script
+```bash
 # 编写dockerfile配置文件
 [root@iz8g9301trfnpxz ~]# cd /home
 [root@iz8g9301trfnpxz home]# mkdir dockerfile
@@ -36,7 +36,7 @@ CMD /bin/bash
 
 通过build命令进行构建
 # 命令 docker build -f dockerfile 文件路径 -t 镜像名
-```shell script
+```bash
 [root@iz8g9301trfnpxz dockerfile]# docker build -f mydocker-centos -t mycentos:0.1 .
 Sending build context to Docker daemon  2.048kB
 Step 1/10 : FROM centos
@@ -177,7 +177,7 @@ Successfully tagged mycentos:0.1
 
 ```
 现在我们使用就可以用了
-```shell script
+```bash
 [root@iz8g9301trfnpxz dockerfile]# docker images
 REPOSITORY            TAG                 IMAGE ID            CREATED              SIZE
 mycentos              0.1                 3f4f73543aa2        About a minute ago   287MB

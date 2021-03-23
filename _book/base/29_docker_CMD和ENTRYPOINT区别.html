@@ -969,32 +969,33 @@
                                 <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#cmd&#x548C;entrypoint&#x533A;&#x522B;"><b></b>CMD&#x548C;ENTRYPOINT&#x533A;&#x522B;</a></li></ul></div><a href="#cmd&#x548C;entrypoint&#x533A;&#x522B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="cmd&#x548C;entrypoint&#x533A;&#x522B;"><a name="cmd&#x548C;entrypoint&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#cmd&#x548C;entrypoint&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>CMD&#x548C;ENTRYPOINT&#x533A;&#x522B;</h1>
 <p><a href="https://www.bilibili.com/video/BV1og4y1q7M4?p=29" target="_blank">https://www.bilibili.com/video/BV1og4y1q7M4?p=29</a></p>
 <p>&#x6D4B;&#x8BD5;cmd&#x547D;&#x4EE4;</p>
-<p>```shell script</p>
-<p>[root@iz8g9301trfnpxz dockerfile]# cat dockerfile-cmd-test 
+<pre><code class="lang-bash">
+[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment"># cat dockerfile-cmd-test </span>
 FROM centos
-CMD [&quot;ls&quot;,&quot;-a&quot;]</p>
-<pre><code>&#x6784;&#x5EFA;&#x955C;&#x50CF;,&#x6267;&#x884C;
-```shell script
+CMD [<span class="hljs-string">&quot;ls&quot;</span>,<span class="hljs-string">&quot;-a&quot;</span>]
+</code></pre>
+<p>&#x6784;&#x5EFA;&#x955C;&#x50CF;,&#x6267;&#x884C;</p>
+<pre><code class="lang-bash">
 
-
-[root@iz8g9301trfnpxz /]# ls
+[root@iz8g9301trfnpxz /]<span class="hljs-comment"># ls</span>
 bin  boot  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-[root@iz8g9301trfnpxz /]# cd /home/dockerfile/
-[root@iz8g9301trfnpxz dockerfile]# ls
+[root@iz8g9301trfnpxz /]<span class="hljs-comment"># cd /home/dockerfile/</span>
+[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment"># ls</span>
 mydocker-centos
-[root@iz8g9301trfnpxz dockerfile]# vim dockerfile-cmd-test
-[root@iz8g9301trfnpxz dockerfile]# docker build -f dockerfile-cmd-test -t cmdtest .
+[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment"># vim dockerfile-cmd-test</span>
+[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment"># docker build -f dockerfile-cmd-test -t cmdtest .</span>
 Sending build context to Docker daemon  3.072kB
 Step 1/2 : FROM centos
  ---&gt; 831691599b88
-Step 2/2 : CMD [&quot;ls&quot;,&quot;-a&quot;]
- ---&gt; Running in e6dca2412833
+Step 2/2 : CMD [<span class="hljs-string">&quot;ls&quot;</span>,<span class="hljs-string">&quot;-a&quot;</span>]
+ ---&gt; Running <span class="hljs-keyword">in</span> e6dca2412833
 Removing intermediate container e6dca2412833
  ---&gt; cef9ed46536a
 Successfully built cef9ed46536a
 Successfully tagged cmdtest:latest
-[root@iz8g9301trfnpxz dockerfile]#
-</code></pre></body></html>
+[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment">#</span>
+</code></pre>
+</body></html>
                                 
                                 </section>
                             
@@ -1037,7 +1038,7 @@ Successfully tagged cmdtest:latest
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CMD和ENTRYPOINT区别","level":"1.2.30","depth":2,"next":{"title":"dockerfile制作Tomcat镜像","level":"1.2.31","depth":2,"path":"base/30_docker_dockerfile制作Tomcat镜像.md","ref":"base/30_docker_dockerfile制作Tomcat镜像.md","articles":[]},"previous":{"title":"构建自己的centos","level":"1.2.29","depth":2,"path":"base/28_docker_构建自己的centos.md","ref":"base/28_docker_构建自己的centos.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/29_docker_CMD和ENTRYPOINT区别.md","mtime":"2020-08-06T11:11:16.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T11:49:21.474Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CMD和ENTRYPOINT区别","level":"1.2.30","depth":2,"next":{"title":"dockerfile制作Tomcat镜像","level":"1.2.31","depth":2,"path":"base/30_docker_dockerfile制作Tomcat镜像.md","ref":"base/30_docker_dockerfile制作Tomcat镜像.md","articles":[]},"previous":{"title":"构建自己的centos","level":"1.2.29","depth":2,"path":"base/28_docker_构建自己的centos.md","ref":"base/28_docker_构建自己的centos.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/29_docker_CMD和ENTRYPOINT区别.md","mtime":"2021-03-23T11:52:14.211Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T11:52:17.227Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

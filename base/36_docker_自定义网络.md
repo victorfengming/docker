@@ -3,7 +3,7 @@
 
 
 查看所有的网络
-```shell script
+```bash
 [root@iz8g9301trfnpxz home]# docker network ls
 NETWORK ID          NAME                DRIVER              SCOPE
 68c30b64280c        bridge              bridge              local
@@ -23,7 +23,7 @@ bc64d000f692        none                null                local
 
 
 测试
-```shell script
+```bash
 # 我们直接启动的命令 --net bridge ,而这个就是我们的docker0
 [root@iz8g9301trfnpxz home]# docker run -d -P --name tomcat01 tomcat
 [root@iz8g9301trfnpxz home]# docker run -d -P --name tomcat01 --net bridge tomcat
@@ -49,7 +49,7 @@ bc64d000f692        none                null                local
 
 查看一下
 
-```shell script
+```bash
 
 [root@iz8g9301trfnpxz home]# docker network inspect mynet
 [

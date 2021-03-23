@@ -5,7 +5,7 @@ https://www.bilibili.com/video/BV1og4y1q7M4?p=29
 
 测试cmd命令
 
-```shell script
+```bash
 
 [root@iz8g9301trfnpxz dockerfile]# cat dockerfile-cmd-test 
 FROM centos
@@ -15,7 +15,7 @@ CMD ["ls","-a"]
 
 ```
 构建镜像,执行
-```shell script
+```bash
 
 
 [root@iz8g9301trfnpxz /]# ls

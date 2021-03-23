@@ -4,7 +4,7 @@
 ## 理解docker0
 清空所有环境
 
-```shell script
+```bash
 
 # 测试
 
@@ -33,12 +33,12 @@ Untagged: mycentos:0.1
 
 ```
 三个网络
-```shell script
+```bash
 # 问题:docker 是如何处理容器网络访问的?
 ```
 
 
-```shell script
+```bash
 
 # 测试
 [root@iz8g9301trfnpxz home]# docker run -d -P --name tomcat03 tomcat
@@ -79,7 +79,7 @@ PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
 
 
 3. 我们来测试下tomcat01和tomcat02是否可以ping通!
-```shell script
+```bash
 docker exec -it tomcat02 ping 172.18.0.2
 # 结论:容器和容器之间是可以互相ping通的
 ```

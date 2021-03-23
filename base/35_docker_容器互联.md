@@ -13,7 +13,7 @@
 
 
 3. 我们来测试下tomcat01和tomcat02是否可以ping通!
-```shell script
+```bash
 docker exec -it tomcat02 ping 172.18.0.2
 # 结论:容器和容器之间是可以互相ping通的
 ```
