@@ -1,20 +1,24 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>commit镜像 · GitBook</title>
+        <title>commit镜像 · docker</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Victor <victorfengming@163.com>">
         
         
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
@@ -41,11 +45,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
@@ -105,7 +113,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -116,7 +124,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://victorfengming.gitee.io/index/gitbook/" target="_blank" class="custom-link">文档索引页</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -928,7 +945,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -961,39 +978,39 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#commit&#x955C;&#x50CF;"><b></b>commit&#x955C;&#x50CF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x540E;&#x9762;&#x6CA1;&#x8BB2;&#x7684;"><b></b>&#x540E;&#x9762;&#x6CA1;&#x8BB2;&#x7684;</a></li></ul></ul></div><a href="#commit&#x955C;&#x50CF;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="commit&#x955C;&#x50CF;"><a name="commit&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#commit&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>commit&#x955C;&#x50CF;</h1>
-<pre><code class="lang-cmd">docker commit &#x63D0;&#x4EA4;&#x5BB9;&#x5668;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x526F;&#x672C;
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#commit&#x955C;&#x50CF;"><b></b>commit&#x955C;&#x50CF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x540E;&#x9762;&#x6CA1;&#x8BB2;&#x7684;"><b></b>&#x540E;&#x9762;&#x6CA1;&#x8BB2;&#x7684;</a></li></ul></ul></div><a href="#commit&#x955C;&#x50CF;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="commit&#x955C;&#x50CF;"><a name="commit&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#commit&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>commit&#x955C;&#x50CF;</h1>
+<pre class="language-"><code class="lang-cmd">docker commit &#x63D0;&#x4EA4;&#x5BB9;&#x5668;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x526F;&#x672C;
 # &#x547D;&#x4EE4;&#x548C;git&#x539F;&#x7406;&#x7C7B;&#x4F3C;
 docker commit -m=&quot;&#x63D0;&#x4EA4;&#x7684;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&quot; -a=&quot;&#x4F5C;&#x8005;&quot; &#x5BB9;&#x5668;id &#x76EE;&#x6807;&#x955C;&#x50CF;&#x540D;:[TAG]
 </code></pre>
 <p>&#x5B9E;&#x6218;</p>
-<pre><code class="lang-cmd">[root@iz8g9301trfnpxz ~]# docker ps
+<pre class="language-"><code class="lang-cmd">[root@iz8g9301trfnpxz ~]# docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES
-<span class="hljs-number">48</span>d9ea6fdb71        tomcat              &quot;catalina.sh run&quot;   <span class="hljs-number">4</span> minutes ago       Up <span class="hljs-number">4</span> minutes        <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>:<span class="hljs-number">8080</span>-&gt;<span class="hljs-number">8080</span>/tcp   interesting_almeida
-[root@iz8g9301trfnpxz ~]# docker commit -a=&quot;victor&quot; -m&quot;add webapps app&quot; <span class="hljs-number">48</span>d9ea6fdb71 tomcat02:<span class="hljs-number">1</span>.<span class="hljs-number">0</span>
-<span class="hljs-function">sha256:<span class="hljs-title">b17b415625d5ba90d1110824b0b3fe407d214945b2a20cefba3add4d060d027d</span>
-[<span class="hljs-title">root</span>@<span class="hljs-title">iz8g9301trfnpxz</span> ~]# <span class="hljs-title">docker</span> <span class="hljs-title">images</span>
-<span class="hljs-title">REPOSITORY</span>            <span class="hljs-title">TAG</span>                 <span class="hljs-title">IMAGE</span> <span class="hljs-title">ID</span>            <span class="hljs-title">CREATED</span>             <span class="hljs-title">SIZE</span>
-<span class="hljs-title">tomcat02</span>              1.0                 <span class="hljs-title">b17b415625d5</span>        7 <span class="hljs-title">seconds</span> <span class="hljs-title">ago</span>       657<span class="hljs-title">MB</span>
-<span class="hljs-title">tomcat</span>                <span class="hljs-title">latest</span>              9<span class="hljs-title">a9ad4f631f8</span>        46 <span class="hljs-title">hours</span> <span class="hljs-title">ago</span>        647<span class="hljs-title">MB</span>
-<span class="hljs-title">portainer</span>/<span class="hljs-title">portainer</span>   <span class="hljs-title">latest</span>              62771<span class="hljs-title">b0b9b09</span>        8 <span class="hljs-title">days</span> <span class="hljs-title">ago</span>          79.1<span class="hljs-title">MB</span>
-<span class="hljs-title">nginx</span>                 <span class="hljs-title">latest</span>              8<span class="hljs-title">cf1bfb43ff5</span>        8 <span class="hljs-title">days</span> <span class="hljs-title">ago</span>          132<span class="hljs-title">MB</span>
-<span class="hljs-title">redis</span>                 <span class="hljs-title">latest</span>              50541622<span class="hljs-title">f4f1</span>        8 <span class="hljs-title">days</span> <span class="hljs-title">ago</span>          104<span class="hljs-title">MB</span>
-<span class="hljs-title">centos</span>                <span class="hljs-title">latest</span>              831691599<span class="hljs-title">b88</span>        6 <span class="hljs-title">weeks</span> <span class="hljs-title">ago</span>         215<span class="hljs-title">MB</span>
-<span class="hljs-title">elasticsearch</span>         7.6.2               <span class="hljs-title">f29a1ee41030</span>        4 <span class="hljs-title">months</span> <span class="hljs-title">ago</span>        791<span class="hljs-title">MB</span>
-<span class="hljs-title">elasticsearch</span>         <span class="hljs-title">latest</span>              5<span class="hljs-title">acf0e8da90b</span>        22 <span class="hljs-title">months</span> <span class="hljs-title">ago</span>       486<span class="hljs-title">MB</span>
-# 1. &#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;<span class="hljs-title">tomcat</span>
-# 2. &#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;<span class="hljs-title">tomcat</span>&#x662F;&#x6CA1;&#x6709;<span class="hljs-title">webapps</span>&#x5E94;&#x7528;,&#x955C;&#x50CF;&#x7684;&#x539F;&#x56E0;,&#x5B98;&#x65B9;&#x7684;&#x955C;&#x50CF;&#x9ED8;&#x8BA4;<span class="hljs-title">webapps</span>&#x4E0B;&#x9762;&#x662F;&#x6CA1;&#x6709;&#x6587;&#x4EF6;&#x7684;!
+48d9ea6fdb71        tomcat              &quot;catalina.sh run&quot;   4 minutes ago       Up 4 minutes        0.0.0.0:8080-&gt;8080/tcp   interesting_almeida
+[root@iz8g9301trfnpxz ~]# docker commit -a=&quot;victor&quot; -m&quot;add webapps app&quot; 48d9ea6fdb71 tomcat02:1.0
+sha256:b17b415625d5ba90d1110824b0b3fe407d214945b2a20cefba3add4d060d027d
+[root@iz8g9301trfnpxz ~]# docker images
+REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
+tomcat02              1.0                 b17b415625d5        7 seconds ago       657MB
+tomcat                latest              9a9ad4f631f8        46 hours ago        647MB
+portainer/portainer   latest              62771b0b9b09        8 days ago          79.1MB
+nginx                 latest              8cf1bfb43ff5        8 days ago          132MB
+redis                 latest              50541622f4f1        8 days ago          104MB
+centos                latest              831691599b88        6 weeks ago         215MB
+elasticsearch         7.6.2               f29a1ee41030        4 months ago        791MB
+elasticsearch         latest              5acf0e8da90b        22 months ago       486MB
+# 1. &#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;tomcat
+# 2. &#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;tomcat&#x662F;&#x6CA1;&#x6709;webapps&#x5E94;&#x7528;,&#x955C;&#x50CF;&#x7684;&#x539F;&#x56E0;,&#x5B98;&#x65B9;&#x7684;&#x955C;&#x50CF;&#x9ED8;&#x8BA4;webapps&#x4E0B;&#x9762;&#x662F;&#x6CA1;&#x6709;&#x6587;&#x4EF6;&#x7684;!
 # 3. &#x6211;&#x81EA;&#x5DF1;&#x62F7;&#x8D1D;&#x8FDB;&#x53BB;&#x57FA;&#x672C;&#x7684;&#x6587;&#x4EF6;
-# 4. &#x5C06;&#x6211;&#x4EEC;&#x64CD;&#x4F5C;&#x8FC7;&#x7684;&#x5BB9;&#x5668;&#x901A;&#x8FC7;<span class="hljs-title">commit</span>&#x63D0;&#x4EA4;&#x4E3A;&#x4E00;&#x4E2A;&#x955C;&#x50CF;!&#x6211;&#x4EEC;&#x4EE5;&#x540E;&#x5C31;&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x955C;&#x50CF;&#x5373;&#x53EF;,&#x8FD9;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x4E2A;&#x4FEE;&#x6539;&#x7684;&#x955C;&#x50CF;
-</span></code></pre>
+# 4. &#x5C06;&#x6211;&#x4EEC;&#x64CD;&#x4F5C;&#x8FC7;&#x7684;&#x5BB9;&#x5668;&#x901A;&#x8FC7;commit&#x63D0;&#x4EA4;&#x4E3A;&#x4E00;&#x4E2A;&#x955C;&#x50CF;!&#x6211;&#x4EEC;&#x4EE5;&#x540E;&#x5C31;&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x955C;&#x50CF;&#x5373;&#x53EF;,&#x8FD9;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x4E2A;&#x4FEE;&#x6539;&#x7684;&#x955C;&#x50CF;
+</code></pre>
 <p>&#x5B66;&#x4E60;&#x65B9;&#x5F0F;&#x8BF4;&#x660E;:&#x7406;&#x89E3;&#x6982;&#x5FF5;,&#x4F46;&#x662F;&#x4E00;&#x5B9A;&#x8981;&#x5B9E;&#x8DF5;,&#x6700;&#x540E;&#x5B9E;&#x8DF5;&#x4E0E;&#x7406;&#x8BBA;&#x60F3;&#x7ED3;&#x5408;&#x4E00;&#x6B21;&#x641E;&#x5B9A;&#x8FD9;&#x4E2A;&#x77E5;&#x8BC6;</p>
-<pre><code class="lang-cmd"># &#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x5BB9;&#x5668;&#x7684;&#x72B6;&#x6001;,&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;commit &#x63D0;&#x4EA4;,&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x955C;&#x50CF;
+<pre class="language-"><code class="lang-cmd"># &#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x5BB9;&#x5668;&#x7684;&#x72B6;&#x6001;,&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;commit &#x63D0;&#x4EA4;,&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x955C;&#x50CF;
 # &#x5C31;&#x597D;&#x6BD4;&#x6211;&#x4EEC;&#x4EE5;&#x524D;&#x5B66;&#x4E60;vm&#x65F6;&#x5019;,&#x5FEB;&#x7167;
 </code></pre>
 <p>&#x5230;&#x4E86;&#x8FD9;&#x91CC;&#x624D;&#x7B97;&#x662F;&#x5165;&#x95E8;docker! &#x8BA4;&#x771F;&#x5438;&#x6536;&#x7EC3;&#x4E60;</p>
@@ -1011,10 +1028,13 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 </li>
 <li><p>Docker Swarm</p>
 </li>
-<li><p>CI/CD Jenkins &#x6D41;&#x6C34;&#x7EBF;!!!</p>
+<li><p>CI/CD Jenkins &#x6D41;&#x6C34;&#x7EBF;!!!</p><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz',appKey: 'nWerbwV2WMAxOEmAMkJKvXzs',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script> <p></p>
 </li>
 </ul>
-</body></html>
+<footer class="page-footer"><span class="copyright">victorfengming.gitee.io&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
+2021-03-22 19:56:23
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
                             
@@ -1057,7 +1077,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"commit镜像","tags":"docker","level":"1.2.21","depth":2,"next":{"title":"容器数据卷","level":"1.2.22","depth":2,"path":"base/2020-07-22-docker_容器数据卷.md","ref":"base/2020-07-22-docker_容器数据卷.md","articles":[]},"previous":{"title":"镜像原理之分层理解","level":"1.2.20","depth":2,"path":"base/2020-07-20-docker_镜像原理之分层理解.md","ref":"base/2020-07-20-docker_镜像原理之分层理解.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/2020-07-21-docker_commit镜像.md","mtime":"2021-03-22T11:56:23.531Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T12:00:44.142Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"commit镜像","tags":"docker","level":"1.2.21","depth":2,"next":{"title":"容器数据卷","level":"1.2.22","depth":2,"path":"base/2020-07-22-docker_容器数据卷.md","ref":"base/2020-07-22-docker_容器数据卷.md","articles":[]},"previous":{"title":"镜像原理之分层理解","level":"1.2.20","depth":2,"path":"base/2020-07-20-docker_镜像原理之分层理解.md","ref":"base/2020-07-20-docker_镜像原理之分层理解.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","valine","hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation","-search","search-plus","-highlight","popup","prism","prism-themes","-sharing","sharing-plus","tbfed-pagefooter","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"victorfengming.gitee.io，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"toolbar-button":{"label":"下载PDF","url":"https://victorfengming.gitee.io/docker/","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"valine":{"placeholder":"Just go go","avatar":"","pageSize":10,"lang":"zh-CN","recordIP":false,"appId":"CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz","appKey":"nWerbwV2WMAxOEmAMkJKvXzs"},"search-plus":{}},"theme":"default","author":"Victor <victorfengming@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docker","language":"zh-hans","links":{"sidebar":{"文档索引页":"https://victorfengming.gitee.io/index/gitbook/"}},"gitbook":"3.2.3","description":"docker容器"},"file":{"path":"base/2020-07-21-docker_commit镜像.md","mtime":"2021-03-22T11:56:23.531Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-30T08:11:44.285Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1065,6 +1085,10 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
@@ -1091,15 +1115,19 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
         
     
         

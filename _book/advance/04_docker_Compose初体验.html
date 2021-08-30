@@ -1,20 +1,24 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Compose初体验 · GitBook</title>
+        <title>Compose初体验 · docker</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Victor <victorfengming@163.com>">
         
         
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
@@ -41,11 +45,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
@@ -105,7 +113,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -116,7 +124,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://victorfengming.gitee.io/index/gitbook/" target="_blank" class="custom-link">文档索引页</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -928,7 +945,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -961,12 +978,12 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#compose&#x521D;&#x4F53;&#x9A8C;"><b></b>Compose&#x521D;&#x4F53;&#x9A8C;</a></li><li><span class="title-icon "></span><a href="#get-started-with-docker-compose"><b></b>Get started with Docker Compose</a></li><ul><li><span class="title-icon "></span><a href="#step-3-define-services-in-a-compose-file"><b></b>Step 3: Define services in a Compose file</a></li><li><span class="title-icon "></span><a href="#step-4-build-and-run-your-app-with-compose"><b></b>Step 4: Build and run your app with Compose</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>&#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#&#x6D41;&#x7A0B;"><b></b>&#x6D41;&#x7A0B;</a></li><ul><li><span class="title-icon "></span><a href="#docker&#x5C0F;&#x7ED3;"><b></b>docker&#x5C0F;&#x7ED3;</a></li></ul></ul></ul></div><a href="#compose&#x521D;&#x4F53;&#x9A8C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="compose&#x521D;&#x4F53;&#x9A8C;"><a name="compose&#x521D;&#x4F53;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#compose&#x521D;&#x4F53;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>Compose&#x521D;&#x4F53;&#x9A8C;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#compose&#x521D;&#x4F53;&#x9A8C;"><b></b>Compose&#x521D;&#x4F53;&#x9A8C;</a></li><li><span class="title-icon "></span><a href="#get-started-with-docker-compose"><b></b>Get started with Docker Compose</a></li><ul><li><span class="title-icon "></span><a href="#step-3-define-services-in-a-compose-file"><b></b>Step 3: Define services in a Compose file</a></li><li><span class="title-icon "></span><a href="#step-4-build-and-run-your-app-with-compose"><b></b>Step 4: Build and run your app with Compose</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>&#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#&#x6D41;&#x7A0B;"><b></b>&#x6D41;&#x7A0B;</a></li><ul><li><span class="title-icon "></span><a href="#docker&#x5C0F;&#x7ED3;"><b></b>docker&#x5C0F;&#x7ED3;</a></li></ul></ul></ul></div><a href="#compose&#x521D;&#x4F53;&#x9A8C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="compose&#x521D;&#x4F53;&#x9A8C;"><a name="compose&#x521D;&#x4F53;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#compose&#x521D;&#x4F53;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>Compose&#x521D;&#x4F53;&#x9A8C;</h1>
 <p>&#x4F53;&#x9A8C;</p>
 <p>&#x5730;&#x5740;:  <a href="https://docs.docker.com/compose/gettingstarted/" target="_blank">https://docs.docker.com/compose/gettingstarted/</a> </p>
 <p><strong>&#x770B;&#x4E00;&#x770B;&#x5B98;&#x65B9;&#x600E;&#x4E48;&#x8BF4;</strong></p>
@@ -982,60 +999,60 @@
 <ol>
 <li>&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;</li>
 </ol>
-<pre><code class="lang-cmd">[root@iz8g9301trfnpxz home]# <span class="hljs-built_in">mkdir</span> composetest
-[root@iz8g9301trfnpxz home]# <span class="hljs-built_in">cd</span> composetest/
+<pre class="language-"><code class="lang-cmd">[root@iz8g9301trfnpxz home]# mkdir composetest
+[root@iz8g9301trfnpxz home]# cd composetest/
 [root@iz8g9301trfnpxz composetest]# ll
-total <span class="hljs-number">0</span>
+total 0
 [root@iz8g9301trfnpxz composetest]# vim app.py
 [root@iz8g9301trfnpxz composetest]# vim requirements.txt
 [root@iz8g9301trfnpxz composetest]# vim Dockerfile
 </code></pre>
 <p>&#x521B;&#x5EFA;app.py&#x6587;&#x4EF6;&#x5185;&#x5BB9;</p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> time
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> time
 
-<span class="hljs-keyword">import</span> redis
-<span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask
+<span class="token keyword">import</span> redis
+<span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask
 
-app = Flask(__name__)
-cache = redis.Redis(host=<span class="hljs-string">&apos;redis&apos;</span>, port=<span class="hljs-number">6379</span>)
-
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_hit_count</span><span class="hljs-params">()</span>:</span>
-    retries = <span class="hljs-number">5</span>
-    <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
-        <span class="hljs-keyword">try</span>:
-            <span class="hljs-keyword">return</span> cache.incr(<span class="hljs-string">&apos;hits&apos;</span>)
-        <span class="hljs-keyword">except</span> redis.exceptions.ConnectionError <span class="hljs-keyword">as</span> exc:
-            <span class="hljs-keyword">if</span> retries == <span class="hljs-number">0</span>:
-                <span class="hljs-keyword">raise</span> exc
-            retries -= <span class="hljs-number">1</span>
-            time.sleep(<span class="hljs-number">0.5</span>)
+app <span class="token operator">=</span> Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
+cache <span class="token operator">=</span> redis<span class="token punctuation">.</span>Redis<span class="token punctuation">(</span>host<span class="token operator">=</span><span class="token string">&apos;redis&apos;</span><span class="token punctuation">,</span> port<span class="token operator">=</span><span class="token number">6379</span><span class="token punctuation">)</span>
 
 
-<span class="hljs-meta">@app.route(&apos;/&apos;)</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hello</span><span class="hljs-params">()</span>:</span>
-    count = get_hit_count()
-    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Hello World! I have been seen {} times.\n&apos;</span>.format(count)
+<span class="token keyword">def</span> <span class="token function">get_hit_count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    retries <span class="token operator">=</span> <span class="token number">5</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> cache<span class="token punctuation">.</span>incr<span class="token punctuation">(</span><span class="token string">&apos;hits&apos;</span><span class="token punctuation">)</span>
+        <span class="token keyword">except</span> redis<span class="token punctuation">.</span>exceptions<span class="token punctuation">.</span>ConnectionError <span class="token keyword">as</span> exc<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> retries <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                <span class="token keyword">raise</span> exc
+            retries <span class="token operator">-=</span> <span class="token number">1</span>
+            time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span>
+
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">&apos;/&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    count <span class="token operator">=</span> get_hit_count<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token string">&apos;Hello World! I have been seen {} times.\n&apos;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span>
 </code></pre>
 <p>&#x521B;&#x5EFA;requirements.txt&#x5185;&#x5BB9;</p>
-<pre><code>flask
+<pre class="language-"><code>flask
 redis
 </code></pre><p>&#x521B;&#x5EFA;dockerfile</p>
-<pre><code class="lang-cmd">FROM python:<span class="hljs-number">3</span>.<span class="hljs-number">7</span>-alpine
+<pre class="language-"><code class="lang-cmd">FROM python:3.7-alpine
 WORKDIR /code
 ENV FLASK_APP app.py
-ENV FLASK_RUN_HOST <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>
+ENV FLASK_RUN_HOST 0.0.0.0
 RUN apk add --no-cache gcc musl-dev linux-headers
-<span class="hljs-built_in">COPY</span> requirements.txt requirements.txt
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-EXPOSE <span class="hljs-number">5000</span>
-<span class="hljs-built_in">COPY</span> . .
-<span class="hljs-built_in">CMD</span> [&quot;flask&quot;, &quot;run&quot;]
+EXPOSE 5000
+COPY . .
+CMD [&quot;flask&quot;, &quot;run&quot;]
 </code></pre>
 <p>&#x5B9A;&#x4E49;&#x670D;&#x52A1;</p>
 <h2 id="step-3-define-services-in-a-compose-file"><a name="step-3-define-services-in-a-compose-file" class="anchor-navigation-ex-anchor" href="#step-3-define-services-in-a-compose-file"><i class="fa fa-link" aria-hidden="true"></i></a>Step 3: Define services in a Compose file</h2>
 <p>Create a file called <code>docker-compose.yml</code> in your project directory and paste the following:</p>
-<pre><code>version: &apos;3&apos;
+<pre class="language-"><code>version: &apos;3&apos;
 services:
   web:
     build: .
@@ -1069,7 +1086,7 @@ services:
 </li>
 <li><p>&#x670D;&#x52A1;</p>
 <ol>
-<li><pre><code>version: &apos;3&apos;
+<li><pre class="language-"><code>version: &apos;3&apos;
 services:
   web:
     build: .
@@ -1084,12 +1101,12 @@ services:
 <hr>
 <p>compose up &#x540E;,&#x4F1A;&#x81EA;&#x52A8;&#x5E2E;&#x6211;&#x4EEC;&#x5B89;&#x88C5;docker&#x9700;&#x8981;&#x7684;&#x955C;&#x50CF;</p>
 <p>&#x6BD4;&#x5982;python</p>
-<p><a href="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806456881.png" data-lightbox="2bbfa168-05a9-4f01-93ed-d3afb57c837c" data-title="1597806456881"><img src="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806456881.png" alt="1597806456881"></a></p>
+<p><a href="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806456881.png" data-lightbox="1a3f03bf-77c8-4639-a810-ec2c7dba13e0" data-title="1597806456881"><img src="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806456881.png" alt="1597806456881"></a></p>
 <p>mysql:3306</p>
 <p>10&#x4E2A;&#x5BB9;&#x5668;&#x5B9E;&#x4F8B;:mysql 10, ip(&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x4E0B;&#x9762;.&#x57DF;&#x540D;&#x8BBF;&#x95EE;)</p>
-<p><a href="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806579451.png" data-lightbox="bac5441a-8b36-49ab-93ed-5c4204378f11" data-title="1597806579451"><img src="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806579451.png" alt="1597806579451"></a></p>
+<p><a href="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806579451.png" data-lightbox="1ccf9c3f-30c7-49fe-9e95-44faba1e1822" data-title="1597806579451"><img src="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806579451.png" alt="1597806579451"></a></p>
 <p>&#x5982;&#x679C;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x4E0B;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x57DF;&#x540D;&#x8BBF;&#x95EE;.</p>
-<p><a href="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806827606.png" data-lightbox="9cda9cda-7a32-4f3b-8d06-8f0eba407aae" data-title="1597806827606"><img src="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806827606.png" alt="1597806827606"></a></p>
+<p><a href="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806827606.png" data-lightbox="40d0301d-38b3-4ec3-a944-1a7d11150e43" data-title="1597806827606"><img src="04_docker_Compose%E5%88%9D%E4%BD%93%E9%AA%8C.assets/1597806827606.png" alt="1597806827606"></a></p>
 <p>&#x53EF;&#x4EE5;&#x4E00;&#x952E;&#x542F;&#x52A8;,&#x670D;&#x52A1;,&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x7684;</p>
 <h3 id="docker&#x5C0F;&#x7ED3;"><a name="docker&#x5C0F;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#docker&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>docker&#x5C0F;&#x7ED3;</h3>
 <ol>
@@ -1097,9 +1114,12 @@ services:
 <li>DockerFile&#x6784;&#x5EFA;&#x955C;&#x50CF; (&#x670D;&#x52A1;&#x6253;&#x5305;)</li>
 <li>docker-compose&#x542F;&#x52A8;&#x9879;&#x76EE;(&#x7F16;&#x6392;,&#x591A;&#x4E2A;&#x5FAE;&#x670D;&#x52A1;/&#x73AF;&#x5883;)</li>
 <li>docker&#x7F51;&#x7EDC;</li>
-<li></li>
+<li><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz',appKey: 'nWerbwV2WMAxOEmAMkJKvXzs',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script> </li>
 </ol>
-</body></html>
+<footer class="page-footer"><span class="copyright">victorfengming.gitee.io&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
+2021-03-22 19:46:35
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
                             
@@ -1142,7 +1162,7 @@ services:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Compose初体验","level":"1.3.4","depth":2,"next":{"title":"Compose配置编写规则","level":"1.3.5","depth":2,"path":"advance/05_docker_Compose配置编写规则.md","ref":"advance/05_docker_Compose配置编写规则.md","articles":[]},"previous":{"title":"Compose安装","level":"1.3.3","depth":2,"path":"advance/03_docker_Compose安装.md","ref":"advance/03_docker_Compose安装.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advance/04_docker_Compose初体验.md","mtime":"2021-03-22T11:46:35.459Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T12:00:44.142Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Compose初体验","level":"1.3.4","depth":2,"next":{"title":"Compose配置编写规则","level":"1.3.5","depth":2,"path":"advance/05_docker_Compose配置编写规则.md","ref":"advance/05_docker_Compose配置编写规则.md","articles":[]},"previous":{"title":"Compose安装","level":"1.3.3","depth":2,"path":"advance/03_docker_Compose安装.md","ref":"advance/03_docker_Compose安装.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","valine","hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation","-search","search-plus","-highlight","popup","prism","prism-themes","-sharing","sharing-plus","tbfed-pagefooter","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"victorfengming.gitee.io，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"toolbar-button":{"label":"下载PDF","url":"https://victorfengming.gitee.io/docker/","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"valine":{"placeholder":"Just go go","avatar":"","pageSize":10,"lang":"zh-CN","recordIP":false,"appId":"CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz","appKey":"nWerbwV2WMAxOEmAMkJKvXzs"},"search-plus":{}},"theme":"default","author":"Victor <victorfengming@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docker","language":"zh-hans","links":{"sidebar":{"文档索引页":"https://victorfengming.gitee.io/index/gitbook/"}},"gitbook":"3.2.3","description":"docker容器"},"file":{"path":"advance/04_docker_Compose初体验.md","mtime":"2021-03-22T11:46:35.459Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-30T08:11:44.285Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1150,6 +1170,10 @@ services:
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
@@ -1176,15 +1200,19 @@ services:
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
         
     
         

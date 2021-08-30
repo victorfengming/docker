@@ -1,20 +1,24 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>初始dockerfile · GitBook</title>
+        <title>初始dockerfile · docker</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Victor <victorfengming@163.com>">
         
         
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
@@ -41,11 +45,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
@@ -105,7 +113,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -116,7 +124,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://victorfengming.gitee.io/index/gitbook/" target="_blank" class="custom-link">文档索引页</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -928,7 +945,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -961,78 +978,78 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x521D;&#x59CB;dockerfile"><b></b>&#x521D;&#x59CB;dockerfile</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;"><b></b>&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;</a></li></ul></div><a href="#&#x521D;&#x59CB;dockerfile" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x521D;&#x59CB;dockerfile"><a name="&#x521D;&#x59CB;dockerfile" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;dockerfile"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;dockerfile</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x521D;&#x59CB;dockerfile"><b></b>&#x521D;&#x59CB;dockerfile</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;"><b></b>&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;</a></li></ul></div><a href="#&#x521D;&#x59CB;dockerfile" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x521D;&#x59CB;dockerfile"><a name="&#x521D;&#x59CB;dockerfile" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;dockerfile"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;dockerfile</h1>
 <p>dockerfile &#x5C31;&#x662F;&#x7528;&#x6765;&#x6784;&#x5EFA;docker&#x955C;&#x50CF;&#x7684;&#x6784;&#x5EFA;&#x6587;&#x4EF6;!&#x547D;&#x4EE4;&#x811A;&#x672C;! &#x5148;&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;!</p>
-<pre><code class="lang-cmd"># &#x901A;&#x8FC7;&#x8FD9;&#x811A;&#x672C;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x955C;&#x50CF;,&#x955C;&#x50CF;&#x662F;&#x4E00;&#x5C42;&#x4E00;&#x5C42;&#x7684;,&#x811A;&#x672C;&#x662F;&#x4E00;&#x4E2A;&#x4E2A;&#x547D;&#x4EE4;,&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x4E00;&#x5C42;
+<pre class="language-"><code class="lang-cmd"># &#x901A;&#x8FC7;&#x8FD9;&#x811A;&#x672C;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x955C;&#x50CF;,&#x955C;&#x50CF;&#x662F;&#x4E00;&#x5C42;&#x4E00;&#x5C42;&#x7684;,&#x811A;&#x672C;&#x662F;&#x4E00;&#x4E2A;&#x4E2A;&#x547D;&#x4EE4;,&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x4E00;&#x5C42;
 </code></pre>
-<pre><code class="lang-cmd"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;dockerfile&#x6587;&#x4EF6;,&#x540D;&#x5B57;&#x53EF;&#x4EE5;&#x968F;&#x673A; &#x5EFA;&#x8BAE;dockerfile
+<pre class="language-"><code class="lang-cmd"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;dockerfile&#x6587;&#x4EF6;,&#x540D;&#x5B57;&#x53EF;&#x4EE5;&#x968F;&#x673A; &#x5EFA;&#x8BAE;dockerfile
 # &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x6307;&#x4EE4;(&#x5927;&#x5199;) &#x53C2;&#x6570;
 FROM centos
 
 VOLUME [&quot;volume01&quot;,&quot;volume02&quot;]
 
-<span class="hljs-built_in">CMD</span> <span class="hljs-built_in">echo</span> &quot;------end------&quot;
+CMD echo &quot;------end------&quot;
 
-<span class="hljs-built_in">CMD</span> /bin/bash/
+CMD /bin/bash/
 
 # &#x8FD9;&#x91CC;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x955C;&#x50CF;&#x7684;&#x4E00;&#x5C42;
 </code></pre>
 <p>&#x8BD5;&#x4E00;&#x4E0B;</p>
-<pre><code class="lang-cmd">[root@iz8g9301trfnpxz docker-test-volume]# docker build -f /home/docker-test-volume/dockerfile1 -t kuangshen/centos:<span class="hljs-number">1</span>.<span class="hljs-number">0</span> .
-Sending build context to Docker daemon  <span class="hljs-number">2</span>.<span class="hljs-number">048</span>kB
-Step <span class="hljs-number">1</span>/<span class="hljs-number">4</span> : FROM centos
- ---&gt; <span class="hljs-number">831691599</span>b88
-Step <span class="hljs-number">2</span>/<span class="hljs-number">4</span> : VOLUME [&quot;volume01&quot;,&quot;volume02&quot;]
- ---&gt; Running <span class="hljs-keyword">in</span> cfe1a7c20843
+<pre class="language-"><code class="lang-cmd">[root@iz8g9301trfnpxz docker-test-volume]# docker build -f /home/docker-test-volume/dockerfile1 -t kuangshen/centos:1.0 .
+Sending build context to Docker daemon  2.048kB
+Step 1/4 : FROM centos
+ ---&gt; 831691599b88
+Step 2/4 : VOLUME [&quot;volume01&quot;,&quot;volume02&quot;]
+ ---&gt; Running in cfe1a7c20843
 Removing intermediate container cfe1a7c20843
  ---&gt; e0877f9a102a
-Step <span class="hljs-number">3</span>/<span class="hljs-number">4</span> : <span class="hljs-built_in">CMD</span> <span class="hljs-built_in">echo</span> &quot;------end------&quot;
- ---&gt; Running <span class="hljs-keyword">in</span> <span class="hljs-number">4</span>ba75004d5d0
-Removing intermediate container <span class="hljs-number">4</span>ba75004d5d0
- ---&gt; <span class="hljs-number">04</span>b1dbef792a
-Step <span class="hljs-number">4</span>/<span class="hljs-number">4</span> : <span class="hljs-built_in">CMD</span> /bin/bash/
- ---&gt; Running <span class="hljs-keyword">in</span> <span class="hljs-number">94</span>b3954a4d3e
-Removing intermediate container <span class="hljs-number">94</span>b3954a4d3e
- ---&gt; <span class="hljs-number">5</span>c7e025fc4ff
-Successfully built <span class="hljs-number">5</span>c7e025fc4ff
-Successfully tagged kuangshen/centos:<span class="hljs-number">1</span>.<span class="hljs-number">0</span>
+Step 3/4 : CMD echo &quot;------end------&quot;
+ ---&gt; Running in 4ba75004d5d0
+Removing intermediate container 4ba75004d5d0
+ ---&gt; 04b1dbef792a
+Step 4/4 : CMD /bin/bash/
+ ---&gt; Running in 94b3954a4d3e
+Removing intermediate container 94b3954a4d3e
+ ---&gt; 5c7e025fc4ff
+Successfully built 5c7e025fc4ff
+Successfully tagged kuangshen/centos:1.0
 [root@iz8g9301trfnpxz docker-test-volume]#
 </code></pre>
 <p>&#x542F;&#x52A8;&#x4E00;&#x4E0B;&#x81EA;&#x5DF1;&#x5199;&#x7684;&#x5BB9;&#x5668;</p>
-<pre><code class="lang-cmd">[root@iz8g9301trfnpxz docker-test-volume]# clear
+<pre class="language-"><code class="lang-cmd">[root@iz8g9301trfnpxz docker-test-volume]# clear
 [root@iz8g9301trfnpxz docker-test-volume]# docker images
 REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
-kuangshen/centos      <span class="hljs-number">1</span>.<span class="hljs-number">0</span>                 <span class="hljs-number">5</span>c7e025fc4ff        <span class="hljs-number">5</span> minutes ago       <span class="hljs-number">215</span>MB
-tomcat02              <span class="hljs-number">1</span>.<span class="hljs-number">0</span>                 b17b415625d5        <span class="hljs-number">2</span> hours ago         <span class="hljs-number">657</span>MB
-tomcat                latest              <span class="hljs-number">9</span>a9ad4f631f8        <span class="hljs-number">2</span> days ago          <span class="hljs-number">647</span>MB
-portainer/portainer   latest              <span class="hljs-number">62771</span>b0b9b09        <span class="hljs-number">8</span> days ago          <span class="hljs-number">79</span>.<span class="hljs-number">1</span>MB
-mysql                 <span class="hljs-number">5</span>.<span class="hljs-number">7</span>                 <span class="hljs-number">8679</span>ced16d20        <span class="hljs-number">8</span> days ago          <span class="hljs-number">448</span>MB
-nginx                 latest              <span class="hljs-number">8</span>cf1bfb43ff5        <span class="hljs-number">8</span> days ago          <span class="hljs-number">132</span>MB
-redis                 latest              <span class="hljs-number">50541622</span>f4f1        <span class="hljs-number">9</span> days ago          <span class="hljs-number">104</span>MB
-centos                latest              <span class="hljs-number">831691599</span>b88        <span class="hljs-number">6</span> weeks ago         <span class="hljs-number">215</span>MB
-elasticsearch         <span class="hljs-number">7</span>.<span class="hljs-number">6</span>.<span class="hljs-number">2</span>               f29a1ee41030        <span class="hljs-number">4</span> months ago        <span class="hljs-number">791</span>MB
-elasticsearch         latest              <span class="hljs-number">5</span>acf0e8da90b        <span class="hljs-number">22</span> months ago       <span class="hljs-number">486</span>MB
-[root@iz8g9301trfnpxz docker-test-volume]# docker run -it <span class="hljs-number">5</span>c7e025fc4ff /bin/bash
-[root@<span class="hljs-number">1</span>e52e32ab8e7 /]# ls
+kuangshen/centos      1.0                 5c7e025fc4ff        5 minutes ago       215MB
+tomcat02              1.0                 b17b415625d5        2 hours ago         657MB
+tomcat                latest              9a9ad4f631f8        2 days ago          647MB
+portainer/portainer   latest              62771b0b9b09        8 days ago          79.1MB
+mysql                 5.7                 8679ced16d20        8 days ago          448MB
+nginx                 latest              8cf1bfb43ff5        8 days ago          132MB
+redis                 latest              50541622f4f1        9 days ago          104MB
+centos                latest              831691599b88        6 weeks ago         215MB
+elasticsearch         7.6.2               f29a1ee41030        4 months ago        791MB
+elasticsearch         latest              5acf0e8da90b        22 months ago       486MB
+[root@iz8g9301trfnpxz docker-test-volume]# docker run -it 5c7e025fc4ff /bin/bash
+[root@1e52e32ab8e7 /]# ls
 bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var  volume01    volume02
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x7684;<code>volume01</code>&#x548C;<code>volume02</code>&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x6302;&#x8F7D;&#x7684;,&#x8FD9;&#x4E2A;&#x5377;&#x548C;&#x5916;&#x90E8;&#x4E00;&#x5B9A;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x7684;</p>
-<pre><code class="lang-cmd">[root@iz8g9301trfnpxz home]# docker ps
+<pre class="language-"><code class="lang-cmd">[root@iz8g9301trfnpxz home]# docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                   NAMES
-<span class="hljs-number">1</span>e52e32ab8e7        <span class="hljs-number">5</span>c7e025fc4ff        &quot;/bin/bash&quot;              <span class="hljs-number">2</span> minutes ago       Up <span class="hljs-number">2</span> minutes                                goofy_feistel
-<span class="hljs-number">33</span>d87d73cf81        nginx               &quot;/docker-entrypoint.&#x2026;&quot;   <span class="hljs-number">25</span> minutes ago      Up <span class="hljs-number">25</span> minutes       <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>:<span class="hljs-number">32769</span>-&gt;<span class="hljs-number">80</span>/tcp   nginx03
-<span class="hljs-number">8</span>ec30de68329        nginx               &quot;/docker-entrypoint.&#x2026;&quot;   <span class="hljs-number">28</span> minutes ago      Up <span class="hljs-number">28</span> minutes       <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>:<span class="hljs-number">32768</span>-&gt;<span class="hljs-number">80</span>/tcp   nginx02
-[root@iz8g9301trfnpxz home]# docker inspect <span class="hljs-number">1</span>e52e32ab8e7
+1e52e32ab8e7        5c7e025fc4ff        &quot;/bin/bash&quot;              2 minutes ago       Up 2 minutes                                goofy_feistel
+33d87d73cf81        nginx               &quot;/docker-entrypoint.&#x2026;&quot;   25 minutes ago      Up 25 minutes       0.0.0.0:32769-&gt;80/tcp   nginx03
+8ec30de68329        nginx               &quot;/docker-entrypoint.&#x2026;&quot;   28 minutes ago      Up 28 minutes       0.0.0.0:32768-&gt;80/tcp   nginx02
+[root@iz8g9301trfnpxz home]# docker inspect 1e52e32ab8e7
 [
     {
-        &quot;Id&quot;: &quot;<span class="hljs-number">1</span>e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f&quot;,
-        &quot;Created&quot;: &quot;<span class="hljs-number">2020</span>-<span class="hljs-number">07</span>-<span class="hljs-number">31</span>T02:<span class="hljs-number">44</span>:<span class="hljs-number">24</span>.<span class="hljs-number">621394005</span>Z&quot;,
-        &quot;<span class="hljs-built_in">Path</span>&quot;: &quot;/bin/bash&quot;,
+        &quot;Id&quot;: &quot;1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f&quot;,
+        &quot;Created&quot;: &quot;2020-07-31T02:44:24.621394005Z&quot;,
+        &quot;Path&quot;: &quot;/bin/bash&quot;,
         &quot;Args&quot;: [],
         &quot;State&quot;: {
             &quot;Status&quot;: &quot;running&quot;,
@@ -1041,19 +1058,19 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
             &quot;Restarting&quot;: false,
             &quot;OOMKilled&quot;: false,
             &quot;Dead&quot;: false,
-            &quot;Pid&quot;: <span class="hljs-number">1318</span>,
-            &quot;ExitCode&quot;: <span class="hljs-number">0</span>,
+            &quot;Pid&quot;: 1318,
+            &quot;ExitCode&quot;: 0,
             &quot;Error&quot;: &quot;&quot;,
-            &quot;StartedAt&quot;: &quot;<span class="hljs-number">2020</span>-<span class="hljs-number">07</span>-<span class="hljs-number">31</span>T02:<span class="hljs-number">44</span>:<span class="hljs-number">24</span>.<span class="hljs-number">951669958</span>Z&quot;,
-            &quot;FinishedAt&quot;: &quot;<span class="hljs-number">0001</span>-<span class="hljs-number">01</span>-<span class="hljs-number">01</span>T00:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>Z&quot;
+            &quot;StartedAt&quot;: &quot;2020-07-31T02:44:24.951669958Z&quot;,
+            &quot;FinishedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;
         },
-        &quot;Image&quot;: &quot;sha256:<span class="hljs-number">5</span>c7e025fc4ff374c40b48eba10fccfeb6c6e00fb5499837e76755f8d22927229&quot;,
-        &quot;ResolvConfPath&quot;: &quot;/var/lib/docker/containers/<span class="hljs-number">1</span>e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/resolv.conf&quot;,
-        &quot;HostnamePath&quot;: &quot;/var/lib/docker/containers/<span class="hljs-number">1</span>e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/hostname&quot;,
-        &quot;HostsPath&quot;: &quot;/var/lib/docker/containers/<span class="hljs-number">1</span>e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/hosts&quot;,
-        &quot;LogPath&quot;: &quot;/var/lib/docker/containers/<span class="hljs-number">1</span>e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/<span class="hljs-number">1</span>e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f-json.log&quot;,
+        &quot;Image&quot;: &quot;sha256:5c7e025fc4ff374c40b48eba10fccfeb6c6e00fb5499837e76755f8d22927229&quot;,
+        &quot;ResolvConfPath&quot;: &quot;/var/lib/docker/containers/1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/resolv.conf&quot;,
+        &quot;HostnamePath&quot;: &quot;/var/lib/docker/containers/1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/hostname&quot;,
+        &quot;HostsPath&quot;: &quot;/var/lib/docker/containers/1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/hosts&quot;,
+        &quot;LogPath&quot;: &quot;/var/lib/docker/containers/1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f-json.log&quot;,
         &quot;Name&quot;: &quot;/goofy_feistel&quot;,
-        &quot;RestartCount&quot;: <span class="hljs-number">0</span>,
+        &quot;RestartCount&quot;: 0,
         &quot;Driver&quot;: &quot;overlay2&quot;,
         &quot;Platform&quot;: &quot;linux&quot;,
         &quot;MountLabel&quot;: &quot;&quot;,
@@ -1064,14 +1081,14 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
             &quot;Binds&quot;: null,
             &quot;ContainerIDFile&quot;: &quot;&quot;,
             &quot;LogConfig&quot;: {
-                &quot;<span class="hljs-built_in">Type</span>&quot;: &quot;json-file&quot;,
+                &quot;Type&quot;: &quot;json-file&quot;,
                 &quot;Config&quot;: {}
             },
             &quot;NetworkMode&quot;: &quot;default&quot;,
             &quot;PortBindings&quot;: {},
             &quot;RestartPolicy&quot;: {
                 &quot;Name&quot;: &quot;no&quot;,
-                &quot;MaximumRetryCount&quot;: <span class="hljs-number">0</span>
+                &quot;MaximumRetryCount&quot;: 0
             },
             &quot;AutoRemove&quot;: false,
             &quot;VolumeDriver&quot;: &quot;&quot;,
@@ -1087,7 +1104,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
             &quot;IpcMode&quot;: &quot;private&quot;,
             &quot;Cgroup&quot;: &quot;&quot;,
             &quot;Links&quot;: null,
-            &quot;OomScoreAdj&quot;: <span class="hljs-number">0</span>,
+            &quot;OomScoreAdj&quot;: 0,
             &quot;PidMode&quot;: &quot;&quot;,
             &quot;Privileged&quot;: false,
             &quot;PublishAllPorts&quot;: false,
@@ -1095,44 +1112,44 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
             &quot;SecurityOpt&quot;: null,
             &quot;UTSMode&quot;: &quot;&quot;,
             &quot;UsernsMode&quot;: &quot;&quot;,
-            &quot;ShmSize&quot;: <span class="hljs-number">67108864</span>,
+            &quot;ShmSize&quot;: 67108864,
             &quot;Runtime&quot;: &quot;runc&quot;,
             &quot;ConsoleSize&quot;: [
-                <span class="hljs-number">0</span>,
-                <span class="hljs-number">0</span>
+                0,
+                0
             ],
             &quot;Isolation&quot;: &quot;&quot;,
-            &quot;CpuShares&quot;: <span class="hljs-number">0</span>,
-            &quot;Memory&quot;: <span class="hljs-number">0</span>,
-            &quot;NanoCpus&quot;: <span class="hljs-number">0</span>,
+            &quot;CpuShares&quot;: 0,
+            &quot;Memory&quot;: 0,
+            &quot;NanoCpus&quot;: 0,
             &quot;CgroupParent&quot;: &quot;&quot;,
-            &quot;BlkioWeight&quot;: <span class="hljs-number">0</span>,
+            &quot;BlkioWeight&quot;: 0,
             &quot;BlkioWeightDevice&quot;: [],
             &quot;BlkioDeviceReadBps&quot;: null,
             &quot;BlkioDeviceWriteBps&quot;: null,
             &quot;BlkioDeviceReadIOps&quot;: null,
             &quot;BlkioDeviceWriteIOps&quot;: null,
-            &quot;CpuPeriod&quot;: <span class="hljs-number">0</span>,
-            &quot;CpuQuota&quot;: <span class="hljs-number">0</span>,
-            &quot;CpuRealtimePeriod&quot;: <span class="hljs-number">0</span>,
-            &quot;CpuRealtimeRuntime&quot;: <span class="hljs-number">0</span>,
+            &quot;CpuPeriod&quot;: 0,
+            &quot;CpuQuota&quot;: 0,
+            &quot;CpuRealtimePeriod&quot;: 0,
+            &quot;CpuRealtimeRuntime&quot;: 0,
             &quot;CpusetCpus&quot;: &quot;&quot;,
             &quot;CpusetMems&quot;: &quot;&quot;,
             &quot;Devices&quot;: [],
             &quot;DeviceCgroupRules&quot;: null,
             &quot;DeviceRequests&quot;: null,
-            &quot;KernelMemory&quot;: <span class="hljs-number">0</span>,
-            &quot;KernelMemoryTCP&quot;: <span class="hljs-number">0</span>,
-            &quot;MemoryReservation&quot;: <span class="hljs-number">0</span>,
-            &quot;MemorySwap&quot;: <span class="hljs-number">0</span>,
+            &quot;KernelMemory&quot;: 0,
+            &quot;KernelMemoryTCP&quot;: 0,
+            &quot;MemoryReservation&quot;: 0,
+            &quot;MemorySwap&quot;: 0,
             &quot;MemorySwappiness&quot;: null,
             &quot;OomKillDisable&quot;: false,
             &quot;PidsLimit&quot;: null,
             &quot;Ulimits&quot;: null,
-            &quot;CpuCount&quot;: <span class="hljs-number">0</span>,
-            &quot;CpuPercent&quot;: <span class="hljs-number">0</span>,
-            &quot;IOMaximumIOps&quot;: <span class="hljs-number">0</span>,
-            &quot;IOMaximumBandwidth&quot;: <span class="hljs-number">0</span>,
+            &quot;CpuCount&quot;: 0,
+            &quot;CpuPercent&quot;: 0,
+            &quot;IOMaximumIOps&quot;: 0,
+            &quot;IOMaximumBandwidth&quot;: 0,
             &quot;MaskedPaths&quot;: [
                 &quot;/proc/asound&quot;,
                 &quot;/proc/acpi&quot;,
@@ -1147,7 +1164,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
             ],
             &quot;ReadonlyPaths&quot;: [
                 &quot;/proc/bus&quot;,
-                &quot;/proc/<span class="hljs-built_in">fs</span>&quot;,
+                &quot;/proc/fs&quot;,
                 &quot;/proc/irq&quot;,
                 &quot;/proc/sys&quot;,
                 &quot;/proc/sysrq-trigger&quot;
@@ -1155,7 +1172,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
         },
         &quot;GraphDriver&quot;: {
             &quot;Data&quot;: {
-                &quot;LowerDir&quot;: &quot;/var/lib/docker/overlay2/b788b8fbe178271f742f242cd0cdced934cb5d4c004fe5fb6af6e7c03ac7a15c-init/diff:/var/lib/docker/overlay2/<span class="hljs-number">7</span>be18956fd4a8679af67244a0bb9d19b4abc7e060c5712ce24bf3489c93ea32b/diff&quot;,
+                &quot;LowerDir&quot;: &quot;/var/lib/docker/overlay2/b788b8fbe178271f742f242cd0cdced934cb5d4c004fe5fb6af6e7c03ac7a15c-init/diff:/var/lib/docker/overlay2/7be18956fd4a8679af67244a0bb9d19b4abc7e060c5712ce24bf3489c93ea32b/diff&quot;,
                 &quot;MergedDir&quot;: &quot;/var/lib/docker/overlay2/b788b8fbe178271f742f242cd0cdced934cb5d4c004fe5fb6af6e7c03ac7a15c/merged&quot;,
                 &quot;UpperDir&quot;: &quot;/var/lib/docker/overlay2/b788b8fbe178271f742f242cd0cdced934cb5d4c004fe5fb6af6e7c03ac7a15c/diff&quot;,
                 &quot;WorkDir&quot;: &quot;/var/lib/docker/overlay2/b788b8fbe178271f742f242cd0cdced934cb5d4c004fe5fb6af6e7c03ac7a15c/work&quot;
@@ -1164,28 +1181,28 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
         },
         &quot;Mounts&quot;: [
             {
-                &quot;<span class="hljs-built_in">Type</span>&quot;: &quot;volume&quot;,
+                &quot;Type&quot;: &quot;volume&quot;,
                 &quot;Name&quot;: &quot;e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca&quot;,
                 &quot;Source&quot;: &quot;/var/lib/docker/volumes/e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca/_data&quot;,
                 &quot;Destination&quot;: &quot;volume02&quot;,
                 &quot;Driver&quot;: &quot;local&quot;,
-                &quot;<span class="hljs-built_in">Mode</span>&quot;: &quot;&quot;,
+                &quot;Mode&quot;: &quot;&quot;,
                 &quot;RW&quot;: true,
                 &quot;Propagation&quot;: &quot;&quot;
             },
             {
-                &quot;<span class="hljs-built_in">Type</span>&quot;: &quot;volume&quot;,
+                &quot;Type&quot;: &quot;volume&quot;,
                 &quot;Name&quot;: &quot;b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964&quot;,
                 &quot;Source&quot;: &quot;/var/lib/docker/volumes/b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964/_data&quot;,
                 &quot;Destination&quot;: &quot;volume01&quot;,
                 &quot;Driver&quot;: &quot;local&quot;,
-                &quot;<span class="hljs-built_in">Mode</span>&quot;: &quot;&quot;,
+                &quot;Mode&quot;: &quot;&quot;,
                 &quot;RW&quot;: true,
                 &quot;Propagation&quot;: &quot;&quot;
             }
         ],
         &quot;Config&quot;: {
-            &quot;Hostname&quot;: &quot;<span class="hljs-number">1</span>e52e32ab8e7&quot;,
+            &quot;Hostname&quot;: &quot;1e52e32ab8e7&quot;,
             &quot;Domainname&quot;: &quot;&quot;,
             &quot;User&quot;: &quot;&quot;,
             &quot;AttachStdin&quot;: true,
@@ -1195,12 +1212,12 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
             &quot;OpenStdin&quot;: true,
             &quot;StdinOnce&quot;: true,
             &quot;Env&quot;: [
-                &quot;<span class="hljs-built_in">PATH</span>=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;
+                &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;
             ],
-            &quot;<span class="hljs-built_in">Cmd</span>&quot;: [
+            &quot;Cmd&quot;: [
                 &quot;/bin/bash&quot;
             ],
-            &quot;Image&quot;: &quot;<span class="hljs-number">5</span>c7e025fc4ff&quot;,
+            &quot;Image&quot;: &quot;5c7e025fc4ff&quot;,
             &quot;Volumes&quot;: {
                 &quot;volume01&quot;: {},
                 &quot;volume02&quot;: {}
@@ -1209,45 +1226,45 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
             &quot;Entrypoint&quot;: null,
             &quot;OnBuild&quot;: null,
             &quot;Labels&quot;: {
-                &quot;org.<span class="hljs-built_in">label</span>-schema.build-<span class="hljs-built_in">date</span>&quot;: &quot;<span class="hljs-number">20200611</span>&quot;,
-                &quot;org.<span class="hljs-built_in">label</span>-schema.license&quot;: &quot;GPLv2&quot;,
-                &quot;org.<span class="hljs-built_in">label</span>-schema.name&quot;: &quot;CentOS Base Image&quot;,
-                &quot;org.<span class="hljs-built_in">label</span>-schema.schema-version&quot;: &quot;<span class="hljs-number">1</span>.<span class="hljs-number">0</span>&quot;,
-                &quot;org.<span class="hljs-built_in">label</span>-schema.vendor&quot;: &quot;CentOS&quot;
+                &quot;org.label-schema.build-date&quot;: &quot;20200611&quot;,
+                &quot;org.label-schema.license&quot;: &quot;GPLv2&quot;,
+                &quot;org.label-schema.name&quot;: &quot;CentOS Base Image&quot;,
+                &quot;org.label-schema.schema-version&quot;: &quot;1.0&quot;,
+                &quot;org.label-schema.vendor&quot;: &quot;CentOS&quot;
             }
         },
         &quot;NetworkSettings&quot;: {
             &quot;Bridge&quot;: &quot;&quot;,
-            &quot;SandboxID&quot;: &quot;<span class="hljs-number">20</span>dbaff762c3e3f81ec4497c34edcf3ff34842bddabb3d0705d1c90551729f4d&quot;,
+            &quot;SandboxID&quot;: &quot;20dbaff762c3e3f81ec4497c34edcf3ff34842bddabb3d0705d1c90551729f4d&quot;,
             &quot;HairpinMode&quot;: false,
             &quot;LinkLocalIPv6Address&quot;: &quot;&quot;,
-            &quot;LinkLocalIPv6PrefixLen&quot;: <span class="hljs-number">0</span>,
+            &quot;LinkLocalIPv6PrefixLen&quot;: 0,
             &quot;Ports&quot;: {},
-            &quot;SandboxKey&quot;: &quot;/var/run/docker/netns/<span class="hljs-number">20</span>dbaff762c3&quot;,
+            &quot;SandboxKey&quot;: &quot;/var/run/docker/netns/20dbaff762c3&quot;,
             &quot;SecondaryIPAddresses&quot;: null,
             &quot;SecondaryIPv6Addresses&quot;: null,
             &quot;EndpointID&quot;: &quot;ce3538bdbc3b50aad38552ea578a45fd4f1db6cbc2e567012efc8b2421433691&quot;,
-            &quot;Gateway&quot;: &quot;<span class="hljs-number">172</span>.<span class="hljs-number">17</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span>&quot;,
+            &quot;Gateway&quot;: &quot;172.17.0.1&quot;,
             &quot;GlobalIPv6Address&quot;: &quot;&quot;,
-            &quot;GlobalIPv6PrefixLen&quot;: <span class="hljs-number">0</span>,
-            &quot;IPAddress&quot;: &quot;<span class="hljs-number">172</span>.<span class="hljs-number">17</span>.<span class="hljs-number">0</span>.<span class="hljs-number">4</span>&quot;,
-            &quot;IPPrefixLen&quot;: <span class="hljs-number">16</span>,
+            &quot;GlobalIPv6PrefixLen&quot;: 0,
+            &quot;IPAddress&quot;: &quot;172.17.0.4&quot;,
+            &quot;IPPrefixLen&quot;: 16,
             &quot;IPv6Gateway&quot;: &quot;&quot;,
-            &quot;MacAddress&quot;: &quot;<span class="hljs-number">02</span>:<span class="hljs-number">42</span>:ac:<span class="hljs-number">11</span>:<span class="hljs-number">00</span>:<span class="hljs-number">04</span>&quot;,
+            &quot;MacAddress&quot;: &quot;02:42:ac:11:00:04&quot;,
             &quot;Networks&quot;: {
                 &quot;bridge&quot;: {
                     &quot;IPAMConfig&quot;: null,
                     &quot;Links&quot;: null,
                     &quot;Aliases&quot;: null,
-                    &quot;NetworkID&quot;: &quot;<span class="hljs-number">68</span>c30b64280cd79fbbee1895f55c67d9febdb11a032fcbd4326319b1ea5c5075&quot;,
+                    &quot;NetworkID&quot;: &quot;68c30b64280cd79fbbee1895f55c67d9febdb11a032fcbd4326319b1ea5c5075&quot;,
                     &quot;EndpointID&quot;: &quot;ce3538bdbc3b50aad38552ea578a45fd4f1db6cbc2e567012efc8b2421433691&quot;,
-                    &quot;Gateway&quot;: &quot;<span class="hljs-number">172</span>.<span class="hljs-number">17</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span>&quot;,
-                    &quot;IPAddress&quot;: &quot;<span class="hljs-number">172</span>.<span class="hljs-number">17</span>.<span class="hljs-number">0</span>.<span class="hljs-number">4</span>&quot;,
-                    &quot;IPPrefixLen&quot;: <span class="hljs-number">16</span>,
+                    &quot;Gateway&quot;: &quot;172.17.0.1&quot;,
+                    &quot;IPAddress&quot;: &quot;172.17.0.4&quot;,
+                    &quot;IPPrefixLen&quot;: 16,
                     &quot;IPv6Gateway&quot;: &quot;&quot;,
                     &quot;GlobalIPv6Address&quot;: &quot;&quot;,
-                    &quot;GlobalIPv6PrefixLen&quot;: <span class="hljs-number">0</span>,
-                    &quot;MacAddress&quot;: &quot;<span class="hljs-number">02</span>:<span class="hljs-number">42</span>:ac:<span class="hljs-number">11</span>:<span class="hljs-number">00</span>:<span class="hljs-number">04</span>&quot;,
+                    &quot;GlobalIPv6PrefixLen&quot;: 0,
+                    &quot;MacAddress&quot;: &quot;02:42:ac:11:00:04&quot;,
                     &quot;DriverOpts&quot;: null
                 }
             }
@@ -1258,31 +1275,31 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 # &#x5916;&#x90E8;&#x6302;&#x8F7D;&#x4FE1;&#x606F;
 &quot;Mounts&quot;: [
             {
-                &quot;<span class="hljs-built_in">Type</span>&quot;: &quot;volume&quot;,
+                &quot;Type&quot;: &quot;volume&quot;,
                 &quot;Name&quot;: &quot;e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca&quot;,
                 &quot;Source&quot;: &quot;/var/lib/docker/volumes/e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca/_data&quot;,
                 &quot;Destination&quot;: &quot;volume02&quot;,
                 &quot;Driver&quot;: &quot;local&quot;,
-                &quot;<span class="hljs-built_in">Mode</span>&quot;: &quot;&quot;,
+                &quot;Mode&quot;: &quot;&quot;,
                 &quot;RW&quot;: true,
                 &quot;Propagation&quot;: &quot;&quot;
             },
             {
-                &quot;<span class="hljs-built_in">Type</span>&quot;: &quot;volume&quot;,
+                &quot;Type&quot;: &quot;volume&quot;,
                 &quot;Name&quot;: &quot;b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964&quot;,
                 &quot;Source&quot;: &quot;/var/lib/docker/volumes/b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964/_data&quot;,
                 &quot;Destination&quot;: &quot;volume01&quot;,
                 &quot;Driver&quot;: &quot;local&quot;,
-                &quot;<span class="hljs-built_in">Mode</span>&quot;: &quot;&quot;,
+                &quot;Mode&quot;: &quot;&quot;,
                 &quot;RW&quot;: true,
                 &quot;Propagation&quot;: &quot;&quot;
             }
         ],
 </code></pre>
 <p>&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x521A;&#x624D;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x540C;&#x6B65;&#x51FA;&#x53BB;&#x4E86;</p>
-<pre><code class="lang-cmd">[root@iz8g9301trfnpxz home]# <span class="hljs-built_in">cd</span> /var/lib/docker/volumes/e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca/_data
+<pre class="language-"><code class="lang-cmd">[root@iz8g9301trfnpxz home]# cd /var/lib/docker/volumes/e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca/_data
 [root@iz8g9301trfnpxz _data]# ls
-[root@iz8g9301trfnpxz _data]# <span class="hljs-built_in">cd</span> /var/lib/docker/volumes/b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964/_data
+[root@iz8g9301trfnpxz _data]# cd /var/lib/docker/volumes/b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964/_data
 [root@iz8g9301trfnpxz _data]# ls
 container.txt
 [root@iz8g9301trfnpxz _data]#
@@ -1291,8 +1308,11 @@ container.txt
 <p>&#x5047;&#x8BBE;&#x6784;&#x5EFA;&#x955C;&#x50CF;&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x6302;&#x8F7D;&#x5377;,&#x8981;&#x624B;&#x52A8;&#x955C;&#x50CF;&#x6302;&#x8F7D; -v &#x5377;&#x540D;:&#x5BB9;&#x5668;&#x5185;&#x8DEF;&#x5F84;!</p>
 <p>&#x5BB9;&#x5668;&#x95F4;&#x4E5F;&#x53EF;&#x4EE5;&#x6570;&#x636E;&#x5171;&#x4EAB;</p>
 <h1 id="&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;"><a name="&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;</h1>
-<p>&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x4E24;&#x4E2A;mysql&#x540C;&#x6B65;&#x6570;&#x636E;</p>
-</body></html>
+<p>&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x4E24;&#x4E2A;mysql&#x540C;&#x6B65;&#x6570;&#x636E;</p><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz',appKey: 'nWerbwV2WMAxOEmAMkJKvXzs',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script> <p></p>
+<footer class="page-footer"><span class="copyright">victorfengming.gitee.io&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
+2021-03-22 19:56:23
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
                             
@@ -1335,7 +1355,7 @@ container.txt
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"初始dockerfile","tags":"docker","level":"1.2.25","depth":2,"next":{"title":"数据卷容器","level":"1.2.26","depth":2,"path":"base/2020-07-26-docker_数据卷容器.md","ref":"base/2020-07-26-docker_数据卷容器.md","articles":[]},"previous":{"title":"具名挂载和匿名挂载","level":"1.2.24","depth":2,"path":"base/2020-07-24-docker_具名挂载和匿名挂载.md","ref":"base/2020-07-24-docker_具名挂载和匿名挂载.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/2020-07-25-docker_初始dockerfile.md","mtime":"2021-03-22T11:56:23.505Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T12:00:44.142Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"初始dockerfile","tags":"docker","level":"1.2.25","depth":2,"next":{"title":"数据卷容器","level":"1.2.26","depth":2,"path":"base/2020-07-26-docker_数据卷容器.md","ref":"base/2020-07-26-docker_数据卷容器.md","articles":[]},"previous":{"title":"具名挂载和匿名挂载","level":"1.2.24","depth":2,"path":"base/2020-07-24-docker_具名挂载和匿名挂载.md","ref":"base/2020-07-24-docker_具名挂载和匿名挂载.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","valine","hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation","-search","search-plus","-highlight","popup","prism","prism-themes","-sharing","sharing-plus","tbfed-pagefooter","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"victorfengming.gitee.io，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"toolbar-button":{"label":"下载PDF","url":"https://victorfengming.gitee.io/docker/","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"valine":{"placeholder":"Just go go","avatar":"","pageSize":10,"lang":"zh-CN","recordIP":false,"appId":"CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz","appKey":"nWerbwV2WMAxOEmAMkJKvXzs"},"search-plus":{}},"theme":"default","author":"Victor <victorfengming@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docker","language":"zh-hans","links":{"sidebar":{"文档索引页":"https://victorfengming.gitee.io/index/gitbook/"}},"gitbook":"3.2.3","description":"docker容器"},"file":{"path":"base/2020-07-25-docker_初始dockerfile.md","mtime":"2021-03-22T11:56:23.505Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-30T08:11:44.285Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1343,6 +1363,10 @@ container.txt
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
@@ -1369,15 +1393,19 @@ container.txt
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
         
     
         

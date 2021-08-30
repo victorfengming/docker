@@ -1,20 +1,24 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>环境准备_阿里云购买4台服务器 · GitBook</title>
+        <title>环境准备_阿里云购买4台服务器 · docker</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Victor <victorfengming@163.com>">
         
         
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
@@ -41,11 +45,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
@@ -105,7 +113,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -116,7 +124,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://victorfengming.gitee.io/index/gitbook/" target="_blank" class="custom-link">文档索引页</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -928,7 +945,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -961,56 +978,60 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;"><b></b>&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;</a></li><li><span class="title-icon "></span><a href="#docker-swarm"><b></b>Docker Swarm</a></li></ul></div><a href="#&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;"><a name="&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;"><b></b>&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;</a></li><li><span class="title-icon "></span><a href="#docker-swarm"><b></b>Docker Swarm</a></li></ul></div><a href="#&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;"><a name="&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x963F;&#x91CC;&#x4E91;&#x4E70;&#x670D;&#x52A1;&#x5668;</h1>
 <h1 id="docker-swarm"><a name="docker-swarm" class="anchor-navigation-ex-anchor" href="#docker-swarm"><i class="fa fa-link" aria-hidden="true"></i></a>Docker Swarm</h1>
 <p>&#x8D2D;&#x4E70;&#x670D;&#x52A1;&#x5668;</p>
 <blockquote>
 </blockquote>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815586714.png" data-lightbox="3ed7cd16-d7a0-43bc-adaa-ad7fa62972c5" data-title="1597815586714"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815586714.png" alt="1597815586714"></a></p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815601413.png" data-lightbox="38ddc68d-5733-42bf-a844-ef1a54fc0300" data-title="1597815601413"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815601413.png" alt="1597815601413"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815586714.png" data-lightbox="21e4af69-f71f-486e-bcf8-eb93eb809628" data-title="1597815586714"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815586714.png" alt="1597815586714"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815601413.png" data-lightbox="81c9351b-bf82-4f30-8ffe-d875986938b9" data-title="1597815601413"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815601413.png" alt="1597815601413"></a></p>
 <p>&#x57FA;&#x7840;&#x914D;&#x7F6E;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815690005.png" data-lightbox="f8ad28ac-e30e-4fcc-b826-7caa5406bc55" data-title="1597815690005"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815690005.png" alt="1597815690005"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815690005.png" data-lightbox="b4de0944-40e7-4bb2-85a2-d2fb21c09192" data-title="1597815690005"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815690005.png" alt="1597815690005"></a></p>
 <p>&#x914D;&#x7F6E;&#x5B89;&#x5168;&#x7EC4;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815705809.png" data-lightbox="ef8d2489-6e36-4125-99ce-5a653f4d0eef" data-title="1597815705809"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815705809.png" alt="1597815705809"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815705809.png" data-lightbox="7dd5e19f-df3c-40a0-8e8d-2632627c15b2" data-title="1597815705809"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815705809.png" alt="1597815705809"></a></p>
 <p>&#x4E00;&#x5B9A;&#x8981;&#x5728;&#x4E00;&#x4E2A;&#x5B89;&#x5168;&#x7EC4;&#x91CC;&#x9762;,&#x4E0D;&#x5728;&#x4E00;&#x4E2A;&#x5B89;&#x5168;&#x7EC4;&#x91CC;&#x9762;,&#x4F60;&#x5185;&#x7F51;&#x662F;ping&#x4E0D;&#x901A;&#x7684;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815778063.png" data-lightbox="b4de121c-efe0-4bb4-8942-d4bd3844980d" data-title="1597815778063"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815778063.png" alt="1597815778063"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815778063.png" data-lightbox="3dbd3e00-c543-4d4e-8df4-8837f751e65b" data-title="1597815778063"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815778063.png" alt="1597815778063"></a></p>
 <p>&#x5185;&#x7F51;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x6D41;&#x91CF;&#x7684;,&#x8981;&#x662F;&#x8D70;&#x5916;&#x7F51;&#x90A3;&#x5C31;....&#x55EF;!~~</p>
 <p>&#x5E26;&#x5BBD;&#x53EF;&#x4EE5;&#x591A;&#x4E00;&#x70B9;&#x513F;,&#x53CD;&#x6B63;&#x662F;&#x6309;&#x7167;&#x91CF;&#x6536;&#x8D39;&#x7684;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815815686.png" data-lightbox="fbd442ae-abb6-49ec-8b53-f753b4b34a89" data-title="1597815815686"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815815686.png" alt="1597815815686"></a></p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815843507.png" data-lightbox="5812ae98-6032-40cf-9f27-49a3b7cc10a5" data-title="1597815843507"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815843507.png" alt="1597815843507"></a></p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815853437.png" data-lightbox="f5ffa1ba-0aae-49ab-9010-5e3cda202da7" data-title="1597815853437"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815853437.png" alt="1597815853437"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815815686.png" data-lightbox="ddf0cf3d-8715-4661-88f6-534752ecb73a" data-title="1597815815686"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815815686.png" alt="1597815815686"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815843507.png" data-lightbox="1bd0427d-c664-45a2-baa0-a6e04337fd79" data-title="1597815843507"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815843507.png" alt="1597815843507"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815853437.png" data-lightbox="a1a37efb-e307-4484-897f-5aff2343ee82" data-title="1597815853437"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815853437.png" alt="1597815853437"></a></p>
 <p>&#x73B0;&#x5728;&#x5C31;&#x597D;&#x4E86;,&#x521B;&#x5EFA;&#x6210;&#x529F;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815887686.png" data-lightbox="e6f80cf3-627a-4034-aa7a-b46e1a7f76b4" data-title="1597815887686"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815887686.png" alt="1597815887686"></a></p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815896358.png" data-lightbox="877c9817-6eee-458c-8fb5-3d22951a0628" data-title="1597815896358"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815896358.png" alt="1597815896358"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815887686.png" data-lightbox="353acc32-bef2-4818-973e-3cb04d047ca5" data-title="1597815887686"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815887686.png" alt="1597815887686"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815896358.png" data-lightbox="06e6cf39-297b-417f-b32d-4a6844af2f99" data-title="1597815896358"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597815896358.png" alt="1597815896358"></a></p>
 <p>&#x8981;&#x662F;&#x4E70;&#x8FD9;&#x4E2A;&#x5728;aliyun&#x91CC;&#x9762;&#x7684;&#x4F59;&#x989D;&#x8981;&#x5927;&#x4E8E;100&#x7684;</p>
 <p>&#x4F60;&#x6CA1;&#x94B1;&#x4F60;&#x73A9;&#x5565;&#x670D;&#x52A1;&#x5668;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816180951.png" data-lightbox="4c14f0e7-fdcd-4e69-b355-32447cfd17c1" data-title="1597816180951"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816180951.png" alt="1597816180951"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816180951.png" data-lightbox="12bfccf7-6705-40de-9406-d8edfcba34e7" data-title="1597816180951"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816180951.png" alt="1597816180951"></a></p>
 <hr>
 <p>4&#x53F0;&#x673A;&#x5668;&#x5B89;&#x88C5;docker</p>
 <p>&#x6709;&#x7684;&#x4EBA;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x6765;&#x5B89;&#x88C5;,&#x73B0;&#x5728;&#x6211;&#x6765;&#x4E00;&#x6CE2;&#x64CD;&#x4F5C;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816257118.png" data-lightbox="0351f783-9b5b-470e-b30e-c7cd8efdbeb7" data-title="1597816257118"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816257118.png" alt="1597816257118"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816257118.png" data-lightbox="b9ba487a-c13c-490e-b10e-1b491d95272c" data-title="1597816257118"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816257118.png" alt="1597816257118"></a></p>
 <p>&#x4F60;&#x8FD9;&#x6837;&#x8F93;&#x5165;&#x90A3;&#x5C31;nb&#x4E86;</p>
 <p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5B89;&#x88C5;&#x6211;&#x4EEC;&#x7684;gcc&#x73AF;&#x5883;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816334269.png" data-lightbox="39b6900f-087d-4bd4-b519-e423c7c31cb8" data-title="1597816334269"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816334269.png" alt="1597816334269"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816334269.png" data-lightbox="4e4637e5-a871-4113-bf6b-9a5a63e49e12" data-title="1597816334269"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816334269.png" alt="1597816334269"></a></p>
 <p>&#x8FD9;&#x4E9B;&#x9AD8;&#x7EA7;&#x5B9E;&#x6218;&#x5BF9;&#x4E8E;&#x5B66;&#x751F;&#x6765;&#x8BF4;&#x6709;&#x538B;&#x529B;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816373140.png" data-lightbox="e59c5bbf-d45a-4a76-9b34-caab4de80a95" data-title="1597816373140"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816373140.png" alt="1597816373140"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816373140.png" data-lightbox="26d8efe4-b5c7-4e83-8f60-e45efe1a89e2" data-title="1597816373140"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816373140.png" alt="1597816373140"></a></p>
 <p>&#x5C24;&#x5176;&#x662F;&#x90A3;&#x4E9B;&#x767D;&#x5AD6;&#x7684;,&#x770B;&#x5230;&#x8FD9;&#x91CC;&#x90FD;&#x4E0D;&#x60F3;&#x770B;&#x4E86;,&#x8FD8;&#x8981;&#x82B1;&#x94B1;,&#x5934;&#x90FD;&#x5927;&#x4E86;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816506766.png" data-lightbox="6adeb1e9-a8a7-41c6-8c58-ae690504f5a1" data-title="1597816506766"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816506766.png" alt="1597816506766"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816506766.png" data-lightbox="cccf1083-1a2d-4ca1-9673-5957d0e09c32" data-title="1597816506766"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816506766.png" alt="1597816506766"></a></p>
 <p>&#x4F60;&#x4EEC;&#x5728;&#x672C;&#x5730;&#x642D;&#x5EFA;&#x7684;&#x90A3;&#x4E9B;&#x90FD;&#x53EB;&#x73A9;&#x5177;</p>
 <p>&#x6839;&#x672C;&#x73A9;&#x4E0D;&#x8D77;&#x6765;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816557827.png" data-lightbox="d0c57290-f1e1-41e9-844c-49ba551c17ae" data-title="1597816557827"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816557827.png" alt="1597816557827"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816557827.png" data-lightbox="a99fb738-b9d6-47fd-91b0-0f91a5a6eb0d" data-title="1597816557827"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816557827.png" alt="1597816557827"></a></p>
 <p>&#x8FD9;&#x4E2A;&#x5378;&#x8F7D;&#x4E0D;&#x9700;&#x8981;,&#x53EF;&#x4EE5;&#x5FFD;&#x7565;,</p>
 <p>&#x7136;&#x540E;</p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816603929.png" data-lightbox="decedc1b-0fe2-424a-a1b5-07b233c2f6cf" data-title="1597816603929"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816603929.png" alt="1597816603929"></a></p>
-<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816629565.png" data-lightbox="3c4de442-3b03-45b1-9309-0e2229586f80" data-title="1597816629565"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816629565.png" alt="1597816629565"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816603929.png" data-lightbox="73b41dd1-d5fb-4711-a56c-0fbc5adddb95" data-title="1597816603929"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816603929.png" alt="1597816603929"></a></p>
+<p><a href="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816629565.png" data-lightbox="67ae9cee-6e5f-4473-9f30-d725028eba12" data-title="1597816629565"><img src="08_docker_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87_%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B04%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8.assets/1597816629565.png" alt="1597816629565"></a></p>
 <p>&#x548C;&#x6211;&#x4EEC;&#x5355;&#x673A;&#x5B89;&#x88C5;&#x4E00;&#x6837;</p>
 <p>&#x6280;&#x5DE7;: xshell&#x76F4;&#x63A5;&#x540C;&#x6B65;&#x64CD;&#x4F5C;,&#x7701;&#x65F6;&#x95F4;,&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;&#x90FD;&#x662F;&#x82B1;&#x94B1;&#x73A9;&#x513F;&#x7684;,&#x4E0D;&#x53EF;&#x80FD;....</p>
-</body></html>
+<p></p><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz',appKey: 'nWerbwV2WMAxOEmAMkJKvXzs',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script> <p></p>
+<footer class="page-footer"><span class="copyright">victorfengming.gitee.io&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
+2020-08-22 19:58:08
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
                             
@@ -1053,7 +1074,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"环境准备_阿里云购买4台服务器","level":"1.3.8","depth":2,"next":{"title":"Swarm集群搭建","level":"1.3.9","depth":2,"path":"advance/09_docker_Swarm集群搭建.md","ref":"advance/09_docker_Swarm集群搭建.md","articles":[]},"previous":{"title":"实战_编写自己的微服务上线","level":"1.3.7","depth":2,"path":"advance/07_docker_实战_编写自己的微服务上线.md","ref":"advance/07_docker_实战_编写自己的微服务上线.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advance/08_docker_环境准备_阿里云购买4台服务器.md","mtime":"2020-08-22T11:58:08.685Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T12:00:44.142Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"环境准备_阿里云购买4台服务器","level":"1.3.8","depth":2,"next":{"title":"Swarm集群搭建","level":"1.3.9","depth":2,"path":"advance/09_docker_Swarm集群搭建.md","ref":"advance/09_docker_Swarm集群搭建.md","articles":[]},"previous":{"title":"实战_编写自己的微服务上线","level":"1.3.7","depth":2,"path":"advance/07_docker_实战_编写自己的微服务上线.md","ref":"advance/07_docker_实战_编写自己的微服务上线.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","valine","hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation","-search","search-plus","-highlight","popup","prism","prism-themes","-sharing","sharing-plus","tbfed-pagefooter","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"victorfengming.gitee.io，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"toolbar-button":{"label":"下载PDF","url":"https://victorfengming.gitee.io/docker/","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"valine":{"placeholder":"Just go go","avatar":"","pageSize":10,"lang":"zh-CN","recordIP":false,"appId":"CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz","appKey":"nWerbwV2WMAxOEmAMkJKvXzs"},"search-plus":{}},"theme":"default","author":"Victor <victorfengming@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docker","language":"zh-hans","links":{"sidebar":{"文档索引页":"https://victorfengming.gitee.io/index/gitbook/"}},"gitbook":"3.2.3","description":"docker容器"},"file":{"path":"advance/08_docker_环境准备_阿里云购买4台服务器.md","mtime":"2020-08-22T11:58:08.685Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-30T08:11:44.285Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1061,6 +1082,10 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
@@ -1087,15 +1112,19 @@
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
         
     
         

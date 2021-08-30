@@ -1,20 +1,24 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Docker其他命令学习方式 · GitBook</title>
+        <title>Docker其他命令学习方式 · docker</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Victor <victorfengming@163.com>">
         
         
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
@@ -41,11 +45,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
@@ -105,7 +113,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -116,7 +124,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://victorfengming.gitee.io/index/gitbook/" target="_blank" class="custom-link">文档索引页</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -928,7 +945,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -961,16 +978,16 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#docker&#x5176;&#x5B83;"><b></b>Docker&#x5176;&#x5B83;</a></li></ul></div><a href="#docker&#x5176;&#x5B83;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="docker&#x5176;&#x5B83;"><a name="docker&#x5176;&#x5B83;" class="anchor-navigation-ex-anchor" href="#docker&#x5176;&#x5B83;"><i class="fa fa-link" aria-hidden="true"></i></a>Docker&#x5176;&#x5B83;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#docker&#x5176;&#x5B83;"><b></b>Docker&#x5176;&#x5B83;</a></li></ul></div><a href="#docker&#x5176;&#x5B83;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="docker&#x5176;&#x5B83;"><a name="docker&#x5176;&#x5B83;" class="anchor-navigation-ex-anchor" href="#docker&#x5176;&#x5B83;"><i class="fa fa-link" aria-hidden="true"></i></a>Docker&#x5176;&#x5B83;</h1>
 <h3 id="docker-stack"><a name="docker-stack" class="anchor-navigation-ex-anchor" href="#docker-stack"><i class="fa fa-link" aria-hidden="true"></i></a>Docker Stack</h3>
 <p>docker-compose &#x5355;&#x673A;&#x90E8;&#x7F72;&#x9879;&#x76EE;!</p>
 <p>Docker Stack&#x90E8;&#x7F72;,&#x96C6;&#x7FA4;&#x90E8;&#x7F72;!</p>
-<pre><code class="lang-cmd"># &#x5355;&#x673A;
+<pre class="language-"><code class="lang-cmd"># &#x5355;&#x673A;
 docker-compose up -d wordpress.yaml
 # &#x96C6;&#x7FA4;
 docker stack deploy
@@ -979,13 +996,17 @@ docker stack deploy
 </code></pre>
 <h3 id="docker-secret"><a name="docker-secret" class="anchor-navigation-ex-anchor" href="#docker-secret"><i class="fa fa-link" aria-hidden="true"></i></a>Docker Secret</h3>
 <p>&#x5B89;&#x5168;!&#x914D;&#x7F6E;&#x5BC6;&#x7801;,&#x8BC1;&#x4E66;!</p>
-<p><a href="13_docker_Docker%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%BC%8F.assets/1597886344876.png" data-lightbox="83a01aca-f43d-4188-b9b4-731ca093e111" data-title="1597886344876"><img src="13_docker_Docker%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%BC%8F.assets/1597886344876.png" alt="1597886344876"></a></p>
+<p><a href="13_docker_Docker%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%BC%8F.assets/1597886344876.png" data-lightbox="9da92a19-23ca-4d39-8011-08454e614b4d" data-title="1597886344876"><img src="13_docker_Docker%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%BC%8F.assets/1597886344876.png" alt="1597886344876"></a></p>
 <h3 id="docker-config"><a name="docker-config" class="anchor-navigation-ex-anchor" href="#docker-config"><i class="fa fa-link" aria-hidden="true"></i></a>Docker Config</h3>
 <p>&#x914D;&#x7F6E;</p>
 <p>docker &#x4E0B;&#x534A;&#x573A;</p>
 <p>docker compose</p>
 <p>docker swarm</p>
-</body></html>
+<p></p><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz',appKey: 'nWerbwV2WMAxOEmAMkJKvXzs',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script> <p></p>
+<footer class="page-footer"><span class="copyright">victorfengming.gitee.io&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
+2021-03-22 19:46:35
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
                             
@@ -1028,7 +1049,7 @@ docker stack deploy
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Docker其他命令学习方式","level":"1.3.13","depth":2,"next":{"title":"Docker完结展望","level":"1.3.14","depth":2,"path":"advance/14_docker_Docker完结展望.md","ref":"advance/14_docker_Docker完结展望.md","articles":[]},"previous":{"title":"Swarm概念拓展学习","level":"1.3.12","depth":2,"path":"advance/12_docker_Swarm概念拓展学习.md","ref":"advance/12_docker_Swarm概念拓展学习.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advance/13_docker_Docker其他命令学习方式.md","mtime":"2021-03-22T11:46:35.487Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T12:00:44.142Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Docker其他命令学习方式","level":"1.3.13","depth":2,"next":{"title":"Docker完结展望","level":"1.3.14","depth":2,"path":"advance/14_docker_Docker完结展望.md","ref":"advance/14_docker_Docker完结展望.md","articles":[]},"previous":{"title":"Swarm概念拓展学习","level":"1.3.12","depth":2,"path":"advance/12_docker_Swarm概念拓展学习.md","ref":"advance/12_docker_Swarm概念拓展学习.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","valine","hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation","-search","search-plus","-highlight","popup","prism","prism-themes","-sharing","sharing-plus","tbfed-pagefooter","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"victorfengming.gitee.io，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"toolbar-button":{"label":"下载PDF","url":"https://victorfengming.gitee.io/docker/","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"valine":{"placeholder":"Just go go","avatar":"","pageSize":10,"lang":"zh-CN","recordIP":false,"appId":"CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz","appKey":"nWerbwV2WMAxOEmAMkJKvXzs"},"search-plus":{}},"theme":"default","author":"Victor <victorfengming@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docker","language":"zh-hans","links":{"sidebar":{"文档索引页":"https://victorfengming.gitee.io/index/gitbook/"}},"gitbook":"3.2.3","description":"docker容器"},"file":{"path":"advance/13_docker_Docker其他命令学习方式.md","mtime":"2021-03-22T11:46:35.487Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-30T08:11:44.285Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1036,6 +1057,10 @@ docker stack deploy
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
@@ -1062,15 +1087,19 @@ docker stack deploy
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
         
     
         

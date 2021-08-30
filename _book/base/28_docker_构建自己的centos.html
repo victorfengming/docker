@@ -1,20 +1,24 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>构建自己的centos · GitBook</title>
+        <title>构建自己的centos · docker</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Victor <victorfengming@163.com>">
         
         
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
@@ -41,11 +45,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
@@ -105,7 +113,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -116,7 +124,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://victorfengming.gitee.io/index/gitbook/" target="_blank" class="custom-link">文档索引页</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -928,7 +945,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -961,204 +978,208 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;"><b></b>&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;</a></li><li><span class="title-icon "></span><a href="#&#x547D;&#x4EE4;-docker-build--f-dockerfile-&#x6587;&#x4EF6;&#x8DEF;&#x5F84;--t-&#x955C;&#x50CF;&#x540D;"><b></b>&#x547D;&#x4EE4; docker build -f dockerfile &#x6587;&#x4EF6;&#x8DEF;&#x5F84; -t &#x955C;&#x50CF;&#x540D;</a></li></ul></div><a href="#&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;"><a name="&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;"><b></b>&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;</a></li><li><span class="title-icon "></span><a href="#&#x547D;&#x4EE4;-docker-build--f-dockerfile-&#x6587;&#x4EF6;&#x8DEF;&#x5F84;--t-&#x955C;&#x50CF;&#x540D;"><b></b>&#x547D;&#x4EE4; docker build -f dockerfile &#x6587;&#x4EF6;&#x8DEF;&#x5F84; -t &#x955C;&#x50CF;&#x540D;</a></li></ul></div><a href="#&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;"><a name="&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;</h1>
 <p>&#x5B9E;&#x6218;&#x6D4B;&#x8BD5;</p>
 <p>&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;centos</p>
-<pre><code class="lang-bash"><span class="hljs-comment"># &#x7F16;&#x5199;dockerfile&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
-[root@iz8g9301trfnpxz ~]<span class="hljs-comment"># cd /home</span>
-[root@iz8g9301trfnpxz home]<span class="hljs-comment"># mkdir dockerfile</span>
-[root@iz8g9301trfnpxz home]<span class="hljs-comment"># ls</span>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x7F16;&#x5199;dockerfile&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+<span class="token punctuation">[</span>root@iz8g9301trfnpxz ~<span class="token punctuation">]</span><span class="token comment"># cd /home</span>
+<span class="token punctuation">[</span>root@iz8g9301trfnpxz home<span class="token punctuation">]</span><span class="token comment"># mkdir dockerfile</span>
+<span class="token punctuation">[</span>root@iz8g9301trfnpxz home<span class="token punctuation">]</span><span class="token comment"># ls</span>
 admin  ceshi  dockerfile  docker-test-volume  kuangshen.java  mysql  test.java
-[root@iz8g9301trfnpxz home]<span class="hljs-comment"># cd dockerfile/</span>
-[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment"># ls</span>
-[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment"># vim mydocker-centos</span>
-[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment"># cat mydocker-centos </span>
+<span class="token punctuation">[</span>root@iz8g9301trfnpxz home<span class="token punctuation">]</span><span class="token comment"># cd dockerfile/</span>
+<span class="token punctuation">[</span>root@iz8g9301trfnpxz dockerfile<span class="token punctuation">]</span><span class="token comment"># ls</span>
+<span class="token punctuation">[</span>root@iz8g9301trfnpxz dockerfile<span class="token punctuation">]</span><span class="token comment"># vim mydocker-centos</span>
+<span class="token punctuation">[</span>root@iz8g9301trfnpxz dockerfile<span class="token punctuation">]</span><span class="token comment"># cat mydocker-centos </span>
 FROM centos
-MAINTAINER victor&lt;510510280@qq.com&gt;
+MAINTAINER victor<span class="token operator">&lt;</span><span class="token number">510510280</span>@qq.com<span class="token operator">&gt;</span>
 
-ENV MYPATH /urs/<span class="hljs-built_in">local</span>
-WORKDIR <span class="hljs-variable">$MYPATH</span>
+ENV MYPATH /urs/local
+WORKDIR <span class="token variable">$MYPATH</span>
 
-RUN yum -y install vim
-RUN yum -y install net-tools
+RUN yum -y <span class="token function">install</span> <span class="token function">vim</span>
+RUN yum -y <span class="token function">install</span> net-tools
 
-EXPOSE 80
+EXPOSE <span class="token number">80</span>
 
-CMD <span class="hljs-built_in">echo</span> <span class="hljs-variable">$MYPATH</span>
-CMD <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;-------------------end------------------&quot;</span>
+CMD <span class="token builtin class-name">echo</span> <span class="token variable">$MYPATH</span>
+CMD <span class="token builtin class-name">echo</span> <span class="token string">&quot;-------------------end------------------&quot;</span>
 CMD /bin/bash
 
 
-<span class="hljs-comment"># &#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x6784;&#x5EFA;&#x955C;&#x50CF;</span>
+<span class="token comment"># &#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x6784;&#x5EFA;&#x955C;&#x50CF;</span>
 </code></pre>
 <p>&#x901A;&#x8FC7;build&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x6784;&#x5EFA;</p>
 <h1 id="&#x547D;&#x4EE4;-docker-build--f-dockerfile-&#x6587;&#x4EF6;&#x8DEF;&#x5F84;--t-&#x955C;&#x50CF;&#x540D;"><a name="&#x547D;&#x4EE4;-docker-build--f-dockerfile-&#x6587;&#x4EF6;&#x8DEF;&#x5F84;--t-&#x955C;&#x50CF;&#x540D;" class="anchor-navigation-ex-anchor" href="#&#x547D;&#x4EE4;-docker-build--f-dockerfile-&#x6587;&#x4EF6;&#x8DEF;&#x5F84;--t-&#x955C;&#x50CF;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x547D;&#x4EE4; docker build -f dockerfile &#x6587;&#x4EF6;&#x8DEF;&#x5F84; -t &#x955C;&#x50CF;&#x540D;</h1>
-<pre><code class="lang-bash">[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment"># docker build -f mydocker-centos -t mycentos:0.1 .</span>
-Sending build context to Docker daemon  2.048kB
-Step 1/10 : FROM centos
- ---&gt; 831691599b88
-Step 2/10 : MAINTAINER victor&lt;510510280@qq.com&gt;
- ---&gt; Running <span class="hljs-keyword">in</span> 5485ccbf2672
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@iz8g9301trfnpxz dockerfile<span class="token punctuation">]</span><span class="token comment"># docker build -f mydocker-centos -t mycentos:0.1 .</span>
+Sending build context to Docker daemon  <span class="token number">2</span>.048kB
+Step <span class="token number">1</span>/10 <span class="token builtin class-name">:</span> FROM centos
+ ---<span class="token operator">&gt;</span> 831691599b88
+Step <span class="token number">2</span>/10 <span class="token builtin class-name">:</span> MAINTAINER victor<span class="token operator">&lt;</span><span class="token number">510510280</span>@qq.com<span class="token operator">&gt;</span>
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> 5485ccbf2672
 Removing intermediate container 5485ccbf2672
- ---&gt; 131330e2008d
-Step 3/10 : ENV MYPATH /urs/<span class="hljs-built_in">local</span>
- ---&gt; Running <span class="hljs-keyword">in</span> 7ddbc3982cdc
+ ---<span class="token operator">&gt;</span> 131330e2008d
+Step <span class="token number">3</span>/10 <span class="token builtin class-name">:</span> ENV MYPATH /urs/local
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> 7ddbc3982cdc
 Removing intermediate container 7ddbc3982cdc
- ---&gt; d8afdf73ae5e
-Step 4/10 : WORKDIR <span class="hljs-variable">$MYPATH</span>
- ---&gt; Running <span class="hljs-keyword">in</span> ee1bb41513bc
+ ---<span class="token operator">&gt;</span> d8afdf73ae5e
+Step <span class="token number">4</span>/10 <span class="token builtin class-name">:</span> WORKDIR <span class="token variable">$MYPATH</span>
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> ee1bb41513bc
 Removing intermediate container ee1bb41513bc
- ---&gt; 77b75be518d6
-Step 5/10 : RUN yum -y install vim
- ---&gt; Running <span class="hljs-keyword">in</span> 4d801fad886d
-CentOS-8 - AppStream                            409 kB/s | 5.8 MB     00:14    
-CentOS-8 - Base                                 2.5 MB/s | 2.2 MB     00:00    
-CentOS-8 - Extras                               941  B/s | 7.0 kB     00:07    
+ ---<span class="token operator">&gt;</span> 77b75be518d6
+Step <span class="token number">5</span>/10 <span class="token builtin class-name">:</span> RUN yum -y <span class="token function">install</span> <span class="token function">vim</span>
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> 4d801fad886d
+CentOS-8 - AppStream                            <span class="token number">409</span> kB/s <span class="token operator">|</span> <span class="token number">5.8</span> MB     00:14    
+CentOS-8 - Base                                 <span class="token number">2.5</span> MB/s <span class="token operator">|</span> <span class="token number">2.2</span> MB     00:00    
+CentOS-8 - Extras                               <span class="token number">941</span>  B/s <span class="token operator">|</span> <span class="token number">7.0</span> kB     00:07    
 Dependencies resolved.
-================================================================================
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
  Package             Arch        Version                   Repository      Size
-================================================================================
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
 Installing:
- vim-enhanced        x86_64      2:8.0.1763-13.el8         AppStream      1.4 M
+ vim-enhanced        x86_64      <span class="token number">2</span>:8.0.1763-13.el8         AppStream      <span class="token number">1.4</span> M
 Installing dependencies:
- gpm-libs            x86_64      1.20.7-15.el8             AppStream       39 k
- vim-common          x86_64      2:8.0.1763-13.el8         AppStream      6.3 M
- vim-filesystem      noarch      2:8.0.1763-13.el8         AppStream       48 k
- <span class="hljs-built_in">which</span>               x86_64      2.21-12.el8               BaseOS          49 k
+ gpm-libs            x86_64      <span class="token number">1.20</span>.7-15.el8             AppStream       <span class="token number">39</span> k
+ vim-common          x86_64      <span class="token number">2</span>:8.0.1763-13.el8         AppStream      <span class="token number">6.3</span> M
+ vim-filesystem      noarch      <span class="token number">2</span>:8.0.1763-13.el8         AppStream       <span class="token number">48</span> k
+ <span class="token function">which</span>               x86_64      <span class="token number">2.21</span>-12.el8               BaseOS          <span class="token number">49</span> k
 
 Transaction Summary
-================================================================================
-Install  5 Packages
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+Install  <span class="token number">5</span> Packages
 
-Total download size: 7.8 M
-Installed size: 31 M
+Total download size: <span class="token number">7.8</span> M
+Installed size: <span class="token number">31</span> M
 Downloading Packages:
-(1/5): gpm-libs-1.20.7-15.el8.x86_64.rpm        219 kB/s |  39 kB     00:00    
-(2/5): vim-filesystem-8.0.1763-13.el8.noarch.rp 434 kB/s |  48 kB     00:00    
-(3/5): <span class="hljs-built_in">which</span>-2.21-12.el8.x86_64.rpm             2.5 MB/s |  49 kB     00:00    
-(4/5): vim-enhanced-8.0.1763-13.el8.x86_64.rpm  813 kB/s | 1.4 MB     00:01    
-(5/5): vim-common-8.0.1763-13.el8.x86_64.rpm    839 kB/s | 6.3 MB     00:07    
+<span class="token punctuation">(</span><span class="token number">1</span>/5<span class="token punctuation">)</span>: gpm-libs-1.20.7-15.el8.x86_64.rpm        <span class="token number">219</span> kB/s <span class="token operator">|</span>  <span class="token number">39</span> kB     00:00    
+<span class="token punctuation">(</span><span class="token number">2</span>/5<span class="token punctuation">)</span>: vim-filesystem-8.0.1763-13.el8.noarch.rp <span class="token number">434</span> kB/s <span class="token operator">|</span>  <span class="token number">48</span> kB     00:00    
+<span class="token punctuation">(</span><span class="token number">3</span>/5<span class="token punctuation">)</span>: which-2.21-12.el8.x86_64.rpm             <span class="token number">2.5</span> MB/s <span class="token operator">|</span>  <span class="token number">49</span> kB     00:00    
+<span class="token punctuation">(</span><span class="token number">4</span>/5<span class="token punctuation">)</span>: vim-enhanced-8.0.1763-13.el8.x86_64.rpm  <span class="token number">813</span> kB/s <span class="token operator">|</span> <span class="token number">1.4</span> MB     00:01    
+<span class="token punctuation">(</span><span class="token number">5</span>/5<span class="token punctuation">)</span>: vim-common-8.0.1763-13.el8.x86_64.rpm    <span class="token number">839</span> kB/s <span class="token operator">|</span> <span class="token number">6.3</span> MB     00:07    
 --------------------------------------------------------------------------------
-Total                                           805 kB/s | 7.8 MB     00:09     
+Total                                           <span class="token number">805</span> kB/s <span class="token operator">|</span> <span class="token number">7.8</span> MB     00:09     
 warning: /var/cache/dnf/AppStream-02e86d1c976ab532/packages/gpm-libs-1.20.7-15.el8.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 8483c65d: NOKEY
-CentOS-8 - AppStream                            862 kB/s | 1.6 kB     00:00    
+CentOS-8 - AppStream                            <span class="token number">862</span> kB/s <span class="token operator">|</span> <span class="token number">1.6</span> kB     00:00    
 Importing GPG key 0x8483C65D:
- Userid     : <span class="hljs-string">&quot;CentOS (CentOS Official Signing Key) &lt;security@centos.org&gt;&quot;</span>
- Fingerprint: 99DB 70FA E1D7 CE22 7FB6 4882 05B5 55B3 8483 C65D
- From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+ Userid     <span class="token builtin class-name">:</span> <span class="token string">&quot;CentOS (CentOS Official Signing Key) &lt;security@centos.org&gt;&quot;</span>
+ Fingerprint: 99DB 70FA E1D7 CE22 7FB6 <span class="token number">4882</span> 05B5 55B3 <span class="token number">8483</span> C65D
+ From       <span class="token builtin class-name">:</span> /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 Key imported successfully
 Running transaction check
 Transaction check succeeded.
-Running transaction <span class="hljs-built_in">test</span>
-Transaction <span class="hljs-built_in">test</span> succeeded.
+Running transaction <span class="token builtin class-name">test</span>
+Transaction <span class="token builtin class-name">test</span> succeeded.
 Running transaction
-  Preparing        :                                                        1/1 
-  Installing       : <span class="hljs-built_in">which</span>-2.21-12.el8.x86_64                               1/5 
-  Installing       : vim-filesystem-2:8.0.1763-13.el8.noarch                2/5 
-  Installing       : vim-common-2:8.0.1763-13.el8.x86_64                    3/5 
-  Installing       : gpm-libs-1.20.7-15.el8.x86_64                          4/5 
-  Running scriptlet: gpm-libs-1.20.7-15.el8.x86_64                          4/5 
-  Installing       : vim-enhanced-2:8.0.1763-13.el8.x86_64                  5/5 
-  Running scriptlet: vim-enhanced-2:8.0.1763-13.el8.x86_64                  5/5 
-  Running scriptlet: vim-common-2:8.0.1763-13.el8.x86_64                    5/5 
-  Verifying        : gpm-libs-1.20.7-15.el8.x86_64                          1/5 
-  Verifying        : vim-common-2:8.0.1763-13.el8.x86_64                    2/5 
-  Verifying        : vim-enhanced-2:8.0.1763-13.el8.x86_64                  3/5 
-  Verifying        : vim-filesystem-2:8.0.1763-13.el8.noarch                4/5 
-  Verifying        : <span class="hljs-built_in">which</span>-2.21-12.el8.x86_64                               5/5 
+  Preparing        <span class="token builtin class-name">:</span>                                                        <span class="token number">1</span>/1 
+  Installing       <span class="token builtin class-name">:</span> which-2.21-12.el8.x86_64                               <span class="token number">1</span>/5 
+  Installing       <span class="token builtin class-name">:</span> vim-filesystem-2:8.0.1763-13.el8.noarch                <span class="token number">2</span>/5 
+  Installing       <span class="token builtin class-name">:</span> vim-common-2:8.0.1763-13.el8.x86_64                    <span class="token number">3</span>/5 
+  Installing       <span class="token builtin class-name">:</span> gpm-libs-1.20.7-15.el8.x86_64                          <span class="token number">4</span>/5 
+  Running scriptlet: gpm-libs-1.20.7-15.el8.x86_64                          <span class="token number">4</span>/5 
+  Installing       <span class="token builtin class-name">:</span> vim-enhanced-2:8.0.1763-13.el8.x86_64                  <span class="token number">5</span>/5 
+  Running scriptlet: vim-enhanced-2:8.0.1763-13.el8.x86_64                  <span class="token number">5</span>/5 
+  Running scriptlet: vim-common-2:8.0.1763-13.el8.x86_64                    <span class="token number">5</span>/5 
+  Verifying        <span class="token builtin class-name">:</span> gpm-libs-1.20.7-15.el8.x86_64                          <span class="token number">1</span>/5 
+  Verifying        <span class="token builtin class-name">:</span> vim-common-2:8.0.1763-13.el8.x86_64                    <span class="token number">2</span>/5 
+  Verifying        <span class="token builtin class-name">:</span> vim-enhanced-2:8.0.1763-13.el8.x86_64                  <span class="token number">3</span>/5 
+  Verifying        <span class="token builtin class-name">:</span> vim-filesystem-2:8.0.1763-13.el8.noarch                <span class="token number">4</span>/5 
+  Verifying        <span class="token builtin class-name">:</span> which-2.21-12.el8.x86_64                               <span class="token number">5</span>/5 
 
 Installed:
   gpm-libs-1.20.7-15.el8.x86_64         vim-common-2:8.0.1763-13.el8.x86_64    
   vim-enhanced-2:8.0.1763-13.el8.x86_64 vim-filesystem-2:8.0.1763-13.el8.noarch
-  <span class="hljs-built_in">which</span>-2.21-12.el8.x86_64             
+  which-2.21-12.el8.x86_64             
 
-Complete!
+Complete<span class="token operator">!</span>
 Removing intermediate container 4d801fad886d
- ---&gt; 9458be1e73c5
-Step 6/10 : RUN yum -y install net-tools
- ---&gt; Running <span class="hljs-keyword">in</span> c764b7488e52
-Last metadata expiration check: 0:00:17 ago on Fri Jul 31 06:20:50 2020.
+ ---<span class="token operator">&gt;</span> 9458be1e73c5
+Step <span class="token number">6</span>/10 <span class="token builtin class-name">:</span> RUN yum -y <span class="token function">install</span> net-tools
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> c764b7488e52
+Last metadata expiration check: <span class="token number">0</span>:00:17 ago on Fri Jul <span class="token number">31</span> 06:20:50 <span class="token number">2020</span>.
 Dependencies resolved.
-================================================================================
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
  Package         Architecture Version                        Repository    Size
-================================================================================
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
 Installing:
- net-tools       x86_64       2.0-0.51.20160912git.el8       BaseOS       323 k
+ net-tools       x86_64       <span class="token number">2.0</span>-0.51.20160912git.el8       BaseOS       <span class="token number">323</span> k
 
 Transaction Summary
-================================================================================
-Install  1 Package
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+Install  <span class="token number">1</span> Package
 
-Total download size: 323 k
-Installed size: 1.0 M
+Total download size: <span class="token number">323</span> k
+Installed size: <span class="token number">1.0</span> M
 Downloading Packages:
-net-tools-2.0-0.51.20160912git.el8.x86_64.rpm   3.4 MB/s | 323 kB     00:00    
+net-tools-2.0-0.51.20160912git.el8.x86_64.rpm   <span class="token number">3.4</span> MB/s <span class="token operator">|</span> <span class="token number">323</span> kB     00:00    
 --------------------------------------------------------------------------------
-Total                                           208 kB/s | 323 kB     00:01     
+Total                                           <span class="token number">208</span> kB/s <span class="token operator">|</span> <span class="token number">323</span> kB     00:01     
 Running transaction check
 Transaction check succeeded.
-Running transaction <span class="hljs-built_in">test</span>
-Transaction <span class="hljs-built_in">test</span> succeeded.
+Running transaction <span class="token builtin class-name">test</span>
+Transaction <span class="token builtin class-name">test</span> succeeded.
 Running transaction
-  Preparing        :                                                        1/1 
-  Installing       : net-tools-2.0-0.51.20160912git.el8.x86_64              1/1 
-  Running scriptlet: net-tools-2.0-0.51.20160912git.el8.x86_64              1/1 
-  Verifying        : net-tools-2.0-0.51.20160912git.el8.x86_64              1/1 
+  Preparing        <span class="token builtin class-name">:</span>                                                        <span class="token number">1</span>/1 
+  Installing       <span class="token builtin class-name">:</span> net-tools-2.0-0.51.20160912git.el8.x86_64              <span class="token number">1</span>/1 
+  Running scriptlet: net-tools-2.0-0.51.20160912git.el8.x86_64              <span class="token number">1</span>/1 
+  Verifying        <span class="token builtin class-name">:</span> net-tools-2.0-0.51.20160912git.el8.x86_64              <span class="token number">1</span>/1 
 
 Installed:
   net-tools-2.0-0.51.20160912git.el8.x86_64                                     
 
-Complete!
+Complete<span class="token operator">!</span>
 Removing intermediate container c764b7488e52
- ---&gt; 7e388732db7d
-Step 7/10 : EXPOSE 80
- ---&gt; Running <span class="hljs-keyword">in</span> 3805ab7a1061
+ ---<span class="token operator">&gt;</span> 7e388732db7d
+Step <span class="token number">7</span>/10 <span class="token builtin class-name">:</span> EXPOSE <span class="token number">80</span>
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> 3805ab7a1061
 Removing intermediate container 3805ab7a1061
- ---&gt; de64af90d6a6
-Step 8/10 : CMD <span class="hljs-built_in">echo</span> <span class="hljs-variable">$MYPATH</span>
- ---&gt; Running <span class="hljs-keyword">in</span> 30d1c0c9ba45
+ ---<span class="token operator">&gt;</span> de64af90d6a6
+Step <span class="token number">8</span>/10 <span class="token builtin class-name">:</span> CMD <span class="token builtin class-name">echo</span> <span class="token variable">$MYPATH</span>
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> 30d1c0c9ba45
 Removing intermediate container 30d1c0c9ba45
- ---&gt; 0dcdb63da784
-Step 9/10 : CMD <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;-------------------end------------------&quot;</span>
- ---&gt; Running <span class="hljs-keyword">in</span> 5ea7cbe4f0c7
+ ---<span class="token operator">&gt;</span> 0dcdb63da784
+Step <span class="token number">9</span>/10 <span class="token builtin class-name">:</span> CMD <span class="token builtin class-name">echo</span> <span class="token string">&quot;-------------------end------------------&quot;</span>
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> 5ea7cbe4f0c7
 Removing intermediate container 5ea7cbe4f0c7
- ---&gt; 146bc756b80a
-Step 10/10 : CMD /bin/bash
- ---&gt; Running <span class="hljs-keyword">in</span> 537d8346e6be
+ ---<span class="token operator">&gt;</span> 146bc756b80a
+Step <span class="token number">10</span>/10 <span class="token builtin class-name">:</span> CMD /bin/bash
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> 537d8346e6be
 Removing intermediate container 537d8346e6be
- ---&gt; 3f4f73543aa2
+ ---<span class="token operator">&gt;</span> 3f4f73543aa2
 Successfully built 3f4f73543aa2
 Successfully tagged mycentos:0.1
-[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment">#</span>
+<span class="token punctuation">[</span>root@iz8g9301trfnpxz dockerfile<span class="token punctuation">]</span><span class="token comment">#</span>
 </code></pre>
 <p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x4E86;</p>
-<pre><code class="lang-bash">[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment"># docker images</span>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@iz8g9301trfnpxz dockerfile<span class="token punctuation">]</span><span class="token comment"># docker images</span>
 REPOSITORY            TAG                 IMAGE ID            CREATED              SIZE
-mycentos              0.1                 3f4f73543aa2        About a minute ago   287MB
-kuangshen/centos      1.0                 5c7e025<span class="hljs-built_in">fc</span>4ff        4 hours ago          215MB
-tomcat02              1.0                 b17b415625d5        6 hours ago          657MB
-tomcat                latest              9a9ad4f631f8        2 days ago           647MB
-portainer/portainer   latest              62771b0b9b09        8 days ago           79.1MB
-mysql                 5.7                 8679ced16d20        8 days ago           448MB
-nginx                 latest              8cf1bfb43ff5        9 days ago           132MB
-redis                 latest              50541622f4f1        9 days ago           104MB
-centos                latest              831691599b88        6 weeks ago          215MB
-elasticsearch         7.6.2               f29a1ee41030        4 months ago         791MB
-elasticsearch         latest              5acf0e8da90b        22 months ago        486MB
-[root@iz8g9301trfnpxz dockerfile]<span class="hljs-comment"># docker run -it mycentos:0.1</span>
-[root@88886ca9deb0 <span class="hljs-built_in">local</span>]<span class="hljs-comment"># pwd</span>
-/urs/<span class="hljs-built_in">local</span>
-[root@88886ca9deb0 <span class="hljs-built_in">local</span>]<span class="hljs-comment">#</span>
+mycentos              <span class="token number">0.1</span>                 3f4f73543aa2        About a minute ago   287MB
+kuangshen/centos      <span class="token number">1.0</span>                 5c7e025fc4ff        <span class="token number">4</span> hours ago          215MB
+tomcat02              <span class="token number">1.0</span>                 b17b415625d5        <span class="token number">6</span> hours ago          657MB
+tomcat                latest              9a9ad4f631f8        <span class="token number">2</span> days ago           647MB
+portainer/portainer   latest              62771b0b9b09        <span class="token number">8</span> days ago           <span class="token number">79</span>.1MB
+mysql                 <span class="token number">5.7</span>                 8679ced16d20        <span class="token number">8</span> days ago           448MB
+nginx                 latest              8cf1bfb43ff5        <span class="token number">9</span> days ago           132MB
+redis                 latest              50541622f4f1        <span class="token number">9</span> days ago           104MB
+centos                latest              831691599b88        <span class="token number">6</span> weeks ago          215MB
+elasticsearch         <span class="token number">7.6</span>.2               f29a1ee41030        <span class="token number">4</span> months ago         791MB
+elasticsearch         latest              5acf0e8da90b        <span class="token number">22</span> months ago        486MB
+<span class="token punctuation">[</span>root@iz8g9301trfnpxz dockerfile<span class="token punctuation">]</span><span class="token comment"># docker run -it mycentos:0.1</span>
+<span class="token punctuation">[</span>root@88886ca9deb0 local<span class="token punctuation">]</span><span class="token comment"># pwd</span>
+/urs/local
+<span class="token punctuation">[</span>root@88886ca9deb0 local<span class="token punctuation">]</span><span class="token comment">#</span>
 </code></pre>
 <p>&#x5BF9;&#x6BD4;&#x4E4B;&#x524D;&#x539F;&#x751F;&#x7684;,centos</p>
 <p>&#x6211;&#x4EEC;&#x589E;&#x52A0;&#x7684;&#x955C;&#x50CF;</p>
 <p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5217;&#x51FA;&#x54B1;&#x4EEC;&#x7684;&#x672C;&#x5730;&#x955C;&#x50CF;&#x7684;&#x53D8;&#x66F4;&#x5386;&#x53F2;</p>
-</body></html>
+<p></p><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz',appKey: 'nWerbwV2WMAxOEmAMkJKvXzs',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script> <p></p>
+<footer class="page-footer"><span class="copyright">victorfengming.gitee.io&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
+2021-03-23 19:52:14
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
                             
@@ -1201,7 +1222,7 @@ elasticsearch         latest              5acf0e8da90b        22 months ago     
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"构建自己的centos","level":"1.2.29","depth":2,"next":{"title":"CMD和ENTRYPOINT区别","level":"1.2.30","depth":2,"path":"base/29_docker_CMD和ENTRYPOINT区别.md","ref":"base/29_docker_CMD和ENTRYPOINT区别.md","articles":[]},"previous":{"title":"dockerFile指令说明","level":"1.2.28","depth":2,"path":"base/27_docker_dockerFile指令说明.md","ref":"base/27_docker_dockerFile指令说明.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/28_docker_构建自己的centos.md","mtime":"2021-03-23T11:52:14.316Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T12:00:44.142Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"构建自己的centos","level":"1.2.29","depth":2,"next":{"title":"CMD和ENTRYPOINT区别","level":"1.2.30","depth":2,"path":"base/29_docker_CMD和ENTRYPOINT区别.md","ref":"base/29_docker_CMD和ENTRYPOINT区别.md","articles":[]},"previous":{"title":"dockerFile指令说明","level":"1.2.28","depth":2,"path":"base/27_docker_dockerFile指令说明.md","ref":"base/27_docker_dockerFile指令说明.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","valine","hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation","-search","search-plus","-highlight","popup","prism","prism-themes","-sharing","sharing-plus","tbfed-pagefooter","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"victorfengming.gitee.io，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"toolbar-button":{"label":"下载PDF","url":"https://victorfengming.gitee.io/docker/","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"valine":{"placeholder":"Just go go","avatar":"","pageSize":10,"lang":"zh-CN","recordIP":false,"appId":"CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz","appKey":"nWerbwV2WMAxOEmAMkJKvXzs"},"search-plus":{}},"theme":"default","author":"Victor <victorfengming@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docker","language":"zh-hans","links":{"sidebar":{"文档索引页":"https://victorfengming.gitee.io/index/gitbook/"}},"gitbook":"3.2.3","description":"docker容器"},"file":{"path":"base/28_docker_构建自己的centos.md","mtime":"2021-03-23T11:52:14.316Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-30T08:11:44.285Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1209,6 +1230,10 @@ elasticsearch         latest              5acf0e8da90b        22 months ago     
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
@@ -1235,15 +1260,19 @@ elasticsearch         latest              5acf0e8da90b        22 months ago     
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
         
     
         

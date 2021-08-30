@@ -1,20 +1,24 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>容器数据卷2 · GitBook</title>
+        <title>容器数据卷2 · docker</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Victor <victorfengming@163.com>">
         
         
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
@@ -41,11 +45,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
@@ -105,7 +113,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -116,7 +124,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://victorfengming.gitee.io/index/gitbook/" target="_blank" class="custom-link">文档索引页</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -928,7 +945,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -961,15 +978,15 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x6218;&#x5B89;&#x88C5;mysql"><b></b>&#x5B9E;&#x6218;&#x5B89;&#x88C5;MySQL</a></li></ul></div><a href="#&#x5B9E;&#x6218;&#x5B89;&#x88C5;mysql" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5B9E;&#x6218;&#x5B89;&#x88C5;mysql"><a name="&#x5B9E;&#x6218;&#x5B89;&#x88C5;mysql" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x6218;&#x5B89;&#x88C5;mysql"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x6218;&#x5B89;&#x88C5;MySQL</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x6218;&#x5B89;&#x88C5;mysql"><b></b>&#x5B9E;&#x6218;&#x5B89;&#x88C5;MySQL</a></li></ul></div><a href="#&#x5B9E;&#x6218;&#x5B89;&#x88C5;mysql" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5B9E;&#x6218;&#x5B89;&#x88C5;mysql"><a name="&#x5B9E;&#x6218;&#x5B89;&#x88C5;mysql" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x6218;&#x5B89;&#x88C5;mysql"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x6218;&#x5B89;&#x88C5;MySQL</h1>
 <p>&#x601D;&#x8003;:MySQL&#x7684;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;&#x95EE;&#x9898;</p>
 <p>docker</p>
-<pre><code class="lang-cmd"># &#x83B7;&#x53D6;&#x955C;&#x50CF;
+<pre class="language-"><code class="lang-cmd"># &#x83B7;&#x53D6;&#x955C;&#x50CF;
 
 # &#x8FD0;&#x884C;&#x5BB9;&#x5668;,&#x9700;&#x8981;&#x505A;&#x6570;&#x636E;&#x6302;&#x8F7D;!
 # &#x5B89;&#x88C5;&#x542F;&#x52A8;mysql,&#x9700;&#x8981;&#x914D;&#x7F6E;&#x5BC6;&#x7801;&#x7684;,&#x8FD9;&#x662F;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x95EE;&#x9898;
@@ -987,8 +1004,11 @@ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
 <p>idea&#x8FDE;&#x63A5;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;3310-&gt; docker &#x5185;&#x7684; 3306&#x6620;&#x5C04;,&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x8FDE;&#x63A5;&#x4E0A;&#x4E86;</p>
 <p>&#x5728;&#x672C;&#x5730;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;,&#x67E5;&#x770B;&#x6211;&#x4EEC;&#x6620;&#x5C04;&#x7684;&#x8DEF;&#x5F84;&#x662F;&#x5426;ok!</p>
 <p>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5C06;&#x5BB9;&#x5668;&#x5220;&#x9664;</p>
-<p>&#x53D1;&#x73B0;,&#x6211;&#x4EEC;&#x6302;&#x8F7D;&#x5230;&#x672C;&#x5730;&#x7684;&#x6570;&#x636E;&#x5377;&#x4F9D;&#x65E7;&#x6CA1;&#x6709;&#x4E22;&#x5931;,&#x8FD9;&#x5C31;&#x662F;&#x5B9E;&#x73B0;&#x4E86;&#x5BB9;&#x5668;&#x6570;&#x636E;&#x7684;&#x6301;&#x4E45;&#x5316;&#x529F;&#x80FD;</p>
-</body></html>
+<p>&#x53D1;&#x73B0;,&#x6211;&#x4EEC;&#x6302;&#x8F7D;&#x5230;&#x672C;&#x5730;&#x7684;&#x6570;&#x636E;&#x5377;&#x4F9D;&#x65E7;&#x6CA1;&#x6709;&#x4E22;&#x5931;,&#x8FD9;&#x5C31;&#x662F;&#x5B9E;&#x73B0;&#x4E86;&#x5BB9;&#x5668;&#x6570;&#x636E;&#x7684;&#x6301;&#x4E45;&#x5316;&#x529F;&#x80FD;</p><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz',appKey: 'nWerbwV2WMAxOEmAMkJKvXzs',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script> <p></p>
+<footer class="page-footer"><span class="copyright">victorfengming.gitee.io&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
+2021-03-22 19:56:23
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
                             
@@ -1031,7 +1051,7 @@ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"容器数据卷2","tags":"docker","level":"1.2.23","depth":2,"next":{"title":"具名挂载和匿名挂载","level":"1.2.24","depth":2,"path":"base/2020-07-24-docker_具名挂载和匿名挂载.md","ref":"base/2020-07-24-docker_具名挂载和匿名挂载.md","articles":[]},"previous":{"title":"容器数据卷","level":"1.2.22","depth":2,"path":"base/2020-07-22-docker_容器数据卷.md","ref":"base/2020-07-22-docker_容器数据卷.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/2020-07-23-docker_容器数据卷2.md","mtime":"2021-03-22T11:56:23.537Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T12:00:44.142Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"容器数据卷2","tags":"docker","level":"1.2.23","depth":2,"next":{"title":"具名挂载和匿名挂载","level":"1.2.24","depth":2,"path":"base/2020-07-24-docker_具名挂载和匿名挂载.md","ref":"base/2020-07-24-docker_具名挂载和匿名挂载.md","articles":[]},"previous":{"title":"容器数据卷","level":"1.2.22","depth":2,"path":"base/2020-07-22-docker_容器数据卷.md","ref":"base/2020-07-22-docker_容器数据卷.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","valine","hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation","-search","search-plus","-highlight","popup","prism","prism-themes","-sharing","sharing-plus","tbfed-pagefooter","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"victorfengming.gitee.io，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"toolbar-button":{"label":"下载PDF","url":"https://victorfengming.gitee.io/docker/","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"valine":{"placeholder":"Just go go","avatar":"","pageSize":10,"lang":"zh-CN","recordIP":false,"appId":"CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz","appKey":"nWerbwV2WMAxOEmAMkJKvXzs"},"search-plus":{}},"theme":"default","author":"Victor <victorfengming@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docker","language":"zh-hans","links":{"sidebar":{"文档索引页":"https://victorfengming.gitee.io/index/gitbook/"}},"gitbook":"3.2.3","description":"docker容器"},"file":{"path":"base/2020-07-23-docker_容器数据卷2.md","mtime":"2021-03-22T11:56:23.537Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-30T08:11:44.285Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1039,6 +1059,10 @@ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
@@ -1065,15 +1089,19 @@ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
         
     
         

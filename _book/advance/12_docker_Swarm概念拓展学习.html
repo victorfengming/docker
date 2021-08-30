@@ -1,20 +1,24 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Swarm概念拓展学习 · GitBook</title>
+        <title>Swarm概念拓展学习 · docker</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Victor <victorfengming@163.com>">
         
         
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
@@ -41,11 +45,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
@@ -105,7 +113,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -116,7 +124,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://victorfengming.gitee.io/index/gitbook/" target="_blank" class="custom-link">文档索引页</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -928,7 +945,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -961,12 +978,12 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x6982;&#x5FF5;&#x603B;&#x7ED3;"><b></b>&#x6982;&#x5FF5;&#x603B;&#x7ED3;</a></li></ul></div><a href="#&#x6982;&#x5FF5;&#x603B;&#x7ED3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6982;&#x5FF5;&#x603B;&#x7ED3;"><a name="&#x6982;&#x5FF5;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x6982;&#x5FF5;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6982;&#x5FF5;&#x603B;&#x7ED3;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x6982;&#x5FF5;&#x603B;&#x7ED3;"><b></b>&#x6982;&#x5FF5;&#x603B;&#x7ED3;</a></li></ul></div><a href="#&#x6982;&#x5FF5;&#x603B;&#x7ED3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6982;&#x5FF5;&#x603B;&#x7ED3;"><a name="&#x6982;&#x5FF5;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x6982;&#x5FF5;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6982;&#x5FF5;&#x603B;&#x7ED3;</h1>
 <h4 id="swarm"><a name="swarm" class="anchor-navigation-ex-anchor" href="#swarm"><i class="fa fa-link" aria-hidden="true"></i></a>swarm</h4>
 <p>&#x96C6;&#x7FA4;&#x7684;&#x7BA1;&#x7406;&#x7F16;&#x53F7;.docker&#x53EF;&#x4EE5;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;swarm&#x96C6;&#x7FA4;,&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x52A0;&#x5165;.(&#x7BA1;&#x7406;,&#x5DE5;&#x4F5C;&#x8005;)</p>
 <h4 id="node"><a name="node" class="anchor-navigation-ex-anchor" href="#node"><i class="fa fa-link" aria-hidden="true"></i></a>Node</h4>
@@ -975,26 +992,30 @@
 <p>&#x4EFB;&#x52A1;,&#x53EF;&#x4EE5;&#x5728;&#x7BA1;&#x7406;&#x8282;&#x70B9;&#x6216;&#x8005;&#x5DE5;&#x4F5C;&#x8282;&#x70B9;&#x6765;&#x8FD0;&#x884C;,&#x6838;&#x5FC3;! &#x7528;&#x6237;&#x8BBF;&#x95EE;! </p>
 <h4 id="task"><a name="task" class="anchor-navigation-ex-anchor" href="#task"><i class="fa fa-link" aria-hidden="true"></i></a>Task</h4>
 <p>&#x5BB9;&#x5668;&#x5185;&#x7684;&#x547D;&#x4EE4;,&#x7EC6;&#x8282;&#x4EFB;&#x52A1;! </p>
-<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885039727.png" data-lightbox="45480060-1cd6-4842-9a81-e90a17049a72" data-title="1597885039727"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885039727.png" alt="1597885039727"></a></p>
+<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885039727.png" data-lightbox="de9e7c67-c214-4126-a46c-c582392461b6" data-title="1597885039727"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885039727.png" alt="1597885039727"></a></p>
 <p>&#x4E00;&#x4E2A;&#x5927;&#x7684;&#x670D;&#x52A1;&#x91CC;&#x9762;&#x6709;4&#x4E2A;&#x526F;&#x672C;,&#x6BCF;&#x4E2A;&#x526F;&#x672C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5C0F;&#x7684;task</p>
-<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885095828.png" data-lightbox="7d7ecfe5-f8b0-4c5f-ac20-53b50905629f" data-title="1597885095828"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885095828.png" alt="1597885095828"></a></p>
-<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885112268.png" data-lightbox="0e2563a4-99fc-4442-b251-5391843ba4bc" data-title="1597885112268"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885112268.png" alt="1597885112268"></a></p>
+<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885095828.png" data-lightbox="8cb1f195-3141-4764-8fae-940068c9466e" data-title="1597885095828"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885095828.png" alt="1597885095828"></a></p>
+<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885112268.png" data-lightbox="f3a99824-3f71-4f49-b50b-7186a1155000" data-title="1597885112268"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885112268.png" alt="1597885112268"></a></p>
 <p>&#x547D;&#x4EE4; -&gt; &#x7BA1;&#x7406; -&gt; api -&gt; &#x8C03;&#x5EA6; -&gt; &#x5DE5;&#x4F5C;&#x8282;&#x70B9; (&#x521B;&#x5EFA;Task&#x5BB9;&#x5668;&#x672A;&#x51FA;&#x521B;&#x5EFA;!)</p>
 <p>&#x5728;k8s&#x7684;&#x5B98;&#x7F51;</p>
-<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885289414.png" data-lightbox="68cfd049-a81e-492f-8519-d3feeafbf4aa" data-title="1597885289414"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885289414.png" alt="1597885289414"></a></p>
-<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885298060.png" data-lightbox="7b9c1d7a-3f3e-4120-a4ce-74e6c49fda35" data-title="1597885298060"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885298060.png" alt="1597885298060"></a></p>
-<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885343185.png" data-lightbox="cf8e1419-c8b5-44b6-bdda-1fb9479b067c" data-title="1597885343185"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885343185.png" alt="1597885343185"></a></p>
-<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885656917.png" data-lightbox="a1a03060-8687-46f0-9ef1-e61025c9e921" data-title="1597885656917"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885656917.png" alt="1597885656917"></a></p>
+<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885289414.png" data-lightbox="47dad02d-be9f-47eb-9270-e6d0336270c1" data-title="1597885289414"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885289414.png" alt="1597885289414"></a></p>
+<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885298060.png" data-lightbox="9671b228-72de-4c78-b440-168ed93ee32c" data-title="1597885298060"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885298060.png" alt="1597885298060"></a></p>
+<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885343185.png" data-lightbox="98aa439b-f60e-4f34-bb7f-6a3574780c25" data-title="1597885343185"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885343185.png" alt="1597885343185"></a></p>
+<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885656917.png" data-lightbox="ecc5a2b8-cefe-47cb-b827-051aff57d6a4" data-title="1597885656917"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885656917.png" alt="1597885656917"></a></p>
 <p>&#x62D3;&#x5C55;: &#x7F51;&#x7EDC;&#x6A21;&#x5F0F; : &quot;PublishMode&quot;:&quot;ingress&quot;</p>
 <p>Swarm:</p>
-<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885708313.png" data-lightbox="6ccd057c-8458-4cea-9014-7579be49034c" data-title="1597885708313"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885708313.png" alt="1597885708313"></a></p>
+<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885708313.png" data-lightbox="e236a572-38c4-41f2-becc-8f994437399d" data-title="1597885708313"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597885708313.png" alt="1597885708313"></a></p>
 <p>Overlay:</p>
 <p>ingress: &#x7279;&#x6B8A;&#x7684;Overlay&#x7F51;&#x7EDC;! &#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;&#x529F;&#x80FD;! IPVS VIP!</p>
 <p>&#x867D;&#x7136;docker &#x5728;4&#x53F0;&#x673A;&#x5668;&#x4E0A;,&#x5B9E;&#x9645;&#x4E0A;&#x7F51;&#x7EDC;&#x662F;&#x540C;&#x4E00;&#x4E2A;! ingress &#x7F51;&#x7EDC;,&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;Overlay&#x7F51;&#x7EDC;</p>
-<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597886043666.png" data-lightbox="930676c8-624a-468e-b704-f089d7a5200a" data-title="1597886043666"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597886043666.png" alt="1597886043666"></a></p>
+<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597886043666.png" data-lightbox="7a8bb519-eb0f-44cc-a968-8c3c07b6e297" data-title="1597886043666"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597886043666.png" alt="1597886043666"></a></p>
 <p>&#x7F51;&#x7EDC;&#x53D8;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x6574;&#x4F53;</p>
-<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597886091760.png" data-lightbox="d157f409-c2e1-41b7-9bed-2d26adf5a2a1" data-title="1597886091760"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597886091760.png" alt="1597886091760"></a></p>
-</body></html>
+<p><a href="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597886091760.png" data-lightbox="d9b50e08-3d28-4506-9e0d-bba5c32e01b5" data-title="1597886091760"><img src="12_docker_Swarm%E6%A6%82%E5%BF%B5%E6%8B%93%E5%B1%95%E5%AD%A6%E4%B9%A0.assets/1597886091760.png" alt="1597886091760"></a></p>
+<p></p><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz',appKey: 'nWerbwV2WMAxOEmAMkJKvXzs',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script> <p></p>
+<footer class="page-footer"><span class="copyright">victorfengming.gitee.io&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
+2020-08-22 19:58:08
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
                             
@@ -1037,7 +1058,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Swarm概念拓展学习","level":"1.3.12","depth":2,"next":{"title":"Docker其他命令学习方式","level":"1.3.13","depth":2,"path":"advance/13_docker_Docker其他命令学习方式.md","ref":"advance/13_docker_Docker其他命令学习方式.md","articles":[]},"previous":{"title":"Swarm集群弹性创建服务","level":"1.3.11","depth":2,"path":"advance/11_docker_Swarm集群弹性创建服务.md","ref":"advance/11_docker_Swarm集群弹性创建服务.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advance/12_docker_Swarm概念拓展学习.md","mtime":"2020-08-22T11:58:08.738Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T12:00:44.142Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Swarm概念拓展学习","level":"1.3.12","depth":2,"next":{"title":"Docker其他命令学习方式","level":"1.3.13","depth":2,"path":"advance/13_docker_Docker其他命令学习方式.md","ref":"advance/13_docker_Docker其他命令学习方式.md","articles":[]},"previous":{"title":"Swarm集群弹性创建服务","level":"1.3.11","depth":2,"path":"advance/11_docker_Swarm集群弹性创建服务.md","ref":"advance/11_docker_Swarm集群弹性创建服务.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","valine","hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation","-search","search-plus","-highlight","popup","prism","prism-themes","-sharing","sharing-plus","tbfed-pagefooter","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"victorfengming.gitee.io，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"toolbar-button":{"label":"下载PDF","url":"https://victorfengming.gitee.io/docker/","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"valine":{"placeholder":"Just go go","avatar":"","pageSize":10,"lang":"zh-CN","recordIP":false,"appId":"CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz","appKey":"nWerbwV2WMAxOEmAMkJKvXzs"},"search-plus":{}},"theme":"default","author":"Victor <victorfengming@163.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docker","language":"zh-hans","links":{"sidebar":{"文档索引页":"https://victorfengming.gitee.io/index/gitbook/"}},"gitbook":"3.2.3","description":"docker容器"},"file":{"path":"advance/12_docker_Swarm概念拓展学习.md","mtime":"2020-08-22T11:58:08.738Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-30T08:11:44.285Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1045,6 +1066,10 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
@@ -1071,15 +1096,19 @@
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
         
     
         
